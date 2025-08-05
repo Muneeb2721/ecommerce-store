@@ -5,10 +5,11 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Header } from './header/header';
+import { Footer } from './footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, FontAwesomeModule, CommonModule],
+  imports: [RouterOutlet, Header, Footer, FontAwesomeModule, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -21,6 +22,10 @@ export class App {
 
   isHomeRoute(): boolean {
     return this.route.url === '/home-page';
+  }
+
+  isHeaderRoute(): boolean {
+    return this.route.url === '/header-page';
   }
   
 }
