@@ -2,3 +2,6 @@
   <app-header></app-header>
 </ng-template>
 <router-outlet></router-outlet>
+<ng-template [ngIf]="isHomeRoute() || isHeaderRoute()">
+  <app-footer></app-footer>
+</ng-template>
