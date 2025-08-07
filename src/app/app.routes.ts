@@ -4,7 +4,7 @@ import { Footer } from './footer/footer';
 import { Header } from './header/header';
 import { Shop } from './shop/shop';
 import { SingleProduct } from './single-product/single-product';
-import { Notifications } from './notifications/notifications';
+import { ProductComparison } from './product-comparison/product-comparison';
 
 export const routes: Routes = [
     
@@ -34,8 +34,8 @@ export const routes: Routes = [
     }
     ,
     {
-        path: 'notifications-page',
-        component: Notifications
+        path: 'product-comparison-page',
+        component: ProductComparison
     }
     ,
     {

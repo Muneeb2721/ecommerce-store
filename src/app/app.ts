@@ -35,5 +35,8 @@ export class App {
   isSingleProductRoute(): boolean {
     return this.route.url === '/single-product-page';
   }
-  
+
+  isProductComparisonRoute() {
+    return this.route.url === '/product-comparison-page';
+  } 
 }
