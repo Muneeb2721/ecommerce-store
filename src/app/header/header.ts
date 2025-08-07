@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faUser, faSearch, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,4 +15,17 @@ export class Header {
   faSearch = faSearch; 
   faHeart = faHeart;
   faShoppingCart = faShoppingCart;
+
+  constructor(private route: Router) {
+
+  }
+  
+  homePage() {
+    this.route.navigate(['home-page']);
+  }
+
+  shopPage() {
+    this.route.navigate(['shop-page']);
+   }
+
 }

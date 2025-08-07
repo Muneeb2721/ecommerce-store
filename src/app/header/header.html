@@ -8,15 +8,15 @@
       </div>
       <div class="nav relative left-12">
         <ul class="flex font-poppins text-[16px] font-medium cursor-pointer
-          mid-lg:space-x-7 mid-xl:space-x-16">
-          <li class=""><a class="">Home</a></li>
-          <li class=""><a class="">Shop</a></li>
-          <li class=""><a class="">About</a></li>
-          <li class=""><a class="">Contact</a></li>
+            space-x-16">
+          <li class=""><a (click)="homePage()" class="">Home</a></li>
+          <li class=""><a (click)="shopPage()" class="">Shop</a></li>
+          <li class=""><a routerLink="/about-page" class="">About</a></li>
+          <li class=""><a routerLink="/header-page" class="">Contact</a></li>
         </ul>
       </div>
       <div class="icons flex cursor-pointer
-        mid-lg:space-x-7 mid-xl:space-x-16">
+            space-x-16">
         <fa-icon [icon]="faUser" class=""></fa-icon>
         <fa-icon [icon]="faSearch" class=""></fa-icon>
         <fa-icon [icon]="faHeart" class=""></fa-icon>

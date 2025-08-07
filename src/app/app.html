@@ -1,7 +1,7 @@
-<ng-template [ngIf]="isHomeRoute()">
+<ng-template [ngIf]="isHomeRoute() || isShopRoute() || isSingleProductRoute()">
   <app-header></app-header>
 </ng-template>
 <router-outlet></router-outlet>
-<ng-template [ngIf]="isHomeRoute() || isHeaderRoute()">
+<ng-template [ngIf]="isHomeRoute() || isHeaderRoute() || isShopRoute() || isSingleProductRoute()">
   <app-footer></app-footer>
 </ng-template>

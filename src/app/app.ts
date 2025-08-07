@@ -27,5 +27,13 @@ export class App {
   isHeaderRoute(): boolean {
     return this.route.url === '/header-page';
   }
+
+  isShopRoute(): boolean {
+    return this.route.url === '/shop-page';
+  }
+
+  isSingleProductRoute(): boolean {
+    return this.route.url === '/single-product-page';
+  }
   
 }
