@@ -1,0 +1,85 @@
+<div class="cart-page font-poppins mb-12">
+    <div class="shop-banner relative flex flex-col h-80 bg-cover bg-center justify-center items-center"
+        style="background-image: url('assets/imgHome/image25.jpg')">
+        <div class="absolute inset-0 bg-white opacity-50 z-10"></div>
+
+        <div class="relative z-20 flex flex-col items-center h-full w-full mt-8">
+            <img src="assets\imgHome\logo.png" alt="Logo" class="w-24 h-24" />
+            <h2 class="text-[45px] text-[#000000]">Cart</h2>
+            <p class="text-[18px] text-[#000000]">
+                <span class="font-semibold"> Home &gt; </span> Cart
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="cart font-poppins flex justify-center gap-5 mb-8">
+    <div class="items-wrapper space-y-7">
+        <div class="items-head bg-[#F9F1E7] flex items-center gap-24 py-1.5 relative pl-45">
+            <p class="font-bold text-[16px]">Product</p>
+            <p class="font-bold text-[16px]">Price</p>
+            <p class="font-bold text-[16px]">Quantity</p>
+            <p class="font-bold text-[16px] relative right-11">Subtotal</p>
+        </div>
+
+        <div class="items-name flex items-center gap-12 py-1.5">
+            <p class="img px-4 py-4 bg-[#F9F1E7] rounded-[8px]">
+                <img src="assets/imgSingleProduct/asgaad-sofa.png"  alt="" class="w-24 h-24">
+            </p>
+            <p class="text-[16px] text-[#9F9F9F]">Asgaard Sofa</p>
+            <p class="text-[16px] text-[#9F9F9F]">Rs. 250,000.00</p>
+            <p class="font-bold text-[16px] border-1 border-[#9F9F9F] rounded-[8px] px-4 py-2">1</p>
+            <p class="font-bold text-[16px]">Rs. 250,000.00</p>
+            <fa-icon [icon]="faDelete" class="text-red-700 cursor-pointer"></fa-icon>
+        </div>
+    </div>
+
+    <div class="checkout bg-[#F9F1E7] flex flex-col gap-10 pt-3 pb-25 px-20 rounded-[2px]">
+        <h2 class="text-[32px] text-black font-semibold">Cart Totals</h2>
+        <div class="prices flex flex-col items-center gap-6 relative top-8">
+            <div class="flex gap-7"><p class="">Subtotal</p> <span class="text-[#9F9F9F] text-[16px]">Rs. 250,000.00</span></div>
+            <div class="flex gap-7"><p class="">Total</p> <span class="text-[#B88E2F] text-[16px]">Rs. 250,000.00</span></div>
+            <div class="flex"><a class="px-12 py-2.5 border-1 border-black rounded-[8px]">Check out</a></div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="frame flex justify-evenly items-baseline bg-[#FAF3EA] py-25">
+    <div class="flex items-center gap-4">
+        <div class="frame-image ">
+            <fa-icon [icon]="faTrophy" class="mr-0.5 text-5xl"></fa-icon>
+        </div>
+        <div class="flex flex-col">
+            <h4 class="text-[#242424] text-[25px] font-semibold">High Quality</h4>
+            <p class="text-[#898989] text-20px font-semibold">crafted from top materials</p>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <div class="frame-image ">
+            <fa-icon [icon]="faShield" class="mr-0.5 text-5xl"></fa-icon>
+        </div>
+        <div class="flex flex-col">
+            <h4 class="text-[#242424] text-[25px] font-semibold">Warranty Protection</h4>
+            <p class="text-[#898989] text-20px font-semibold">Over 2 years</p>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <div class="frame-image ">
+            <fa-icon [icon]="faTruck" class="mr-0.5 text-5xl"></fa-icon>
+        </div>
+        <div class="flex flex-col">
+            <h4 class="text-[#242424] text-[25px] font-semibold">Free Shipping</h4>
+            <p class="text-[#898989] text-20px font-semibold">Order over 150 $</p>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <div class="frame-image ">
+            <fa-icon [icon]="faHeadset" class="mr-0.5 text-5xl"></fa-icon>
+        </div>
+        <div class="flex flex-col">
+            <h4 class="text-[#242424] text-[25px] font-semibold">24 / 7 Support</h4>
+            <p class="text-[#898989] text-20px font-semibold">Dedicated support</p>
+        </div>
+    </div>
+</div>
