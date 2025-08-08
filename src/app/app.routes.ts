@@ -5,6 +5,8 @@ import { Header } from './header/header';
 import { Shop } from './shop/shop';
 import { SingleProduct } from './single-product/single-product';
 import { ProductComparison } from './product-comparison/product-comparison';
+import { Cart } from './cart/cart';
+import { Checkout } from './checkout/checkout';
 
 export const routes: Routes = [
     
@@ -36,6 +38,16 @@ export const routes: Routes = [
     {
         path: 'product-comparison-page',
         component: ProductComparison
+    }
+    ,
+    {
+        path: 'cart-page',
+        component: Cart
+    }
+    ,
+    {
+        path: 'checkout-page',
+        component: Checkout
     }
     ,
     {

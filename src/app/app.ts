@@ -39,4 +39,12 @@ export class App {
   isProductComparisonRoute() {
     return this.route.url === '/product-comparison-page';
   } 
+
+  isCartRoute() {
+    return this.route.url === '/cart-page';
+  } 
+
+  isCheckoutRoute() {
+    return this.route.url === '/checkout-page';
+  } 
 }
