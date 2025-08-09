@@ -11,6 +11,7 @@
       "prefix": "app",
       "architect": {
         "build": {
+          
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
@@ -28,7 +29,8 @@
             ],
             "styles": [
               "src/styles.css"
-            ]
+            ],
+            "outputPath": "dist"
           },
           "configurations": {
             "production": {
@@ -44,7 +46,8 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/ecommerce-store/"
             },
             "development": {
               "optimization": false,
