@@ -13,20 +13,22 @@
     </div>
 </div>
 
-<div class="checkout-details font-poppins">
+<div class="checkout-details font-poppins mb-12">
     <div class="checkout-form space-y-6">
         <h2 class="text-[36px] text-black font-semibold px-32">Billing details</h2>
         <div class="flex justify-center px-32 gap-32">
-            <form class="space-y-10">
+            <form class="space-y-10 w-fit">
 
                 <div class="name flex space-y-3 gap-5">
-                    <div class="f-name flex flex-col space-y-3 w-fit">
+                    <div class="f-name flex flex-col space-y-3">
                         <label class="text-[#000000] text-[16px] font-bold" for="f-name">First Name</label>
-                        <input type="text" name="f-name" class="border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[8px]">
+                        <input type="text" name="f-name" class="border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[8px]
+                            w-[12rem]">
                     </div>
-                    <div class="l-name flex flex-col space-y-3 w-fit">
+                    <div class="l-name flex flex-col space-y-3">
                         <label class="text-[#000000] text-[16px] font-bold" for="l-name">Last Name</label>
-                        <input type="text" name="l-name" class="border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[8px]">
+                        <input type="text" name="l-name" class="border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[8px]
+                            w-[12rem]">
                     </div>
                 </div>
 
@@ -38,7 +40,7 @@
                 <div class="dropdown-c-name flex flex-col space-y-3">
                     <label class="text-[#000000] text-[16px] font-bold" for="dropdown-c-option">Country / Region</label>
                     <select name="dropdown-c-option" id="dropdown-c-name"
-                        class="border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[8px]">
+                        class="border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[8px] text-[#9F9F9F]">
                         <option value="">Sri Lanka</option>
                         <option value="">Pakistan</option>
                         <option value="">Iran</option>
@@ -58,7 +60,7 @@
                 <div class="dropdown-p-name flex flex-col space-y-3">
                     <label class="text-[#000000] text-[16px] font-bold" for="dropdown-p-option">Country / Region</label>
                     <select name="dropdown-p-option" id="dropdown-p-name"
-                        class="border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[8px]">
+                        class="border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[8px] text-[#9F9F9F]">
                         <option value="">Western Province</option>
                         <option value="">Eastern Province</option>
                         <option value="">Northern Province</option>
@@ -80,15 +82,14 @@
                     <input type="text" name="email" id="email" class="border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[8px]">
                 </div>
 
-                <div class="A-info flex flex-col space-y-3">
-                    <label class="text-[#000000] text-[16px] font-bold" for="a-info">Additional Information</label>
-                    <input type="text" name="a-info" id="a-info" class="border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[8px]">
+                <div class="a-info flex flex-col space-y-3">
+                    <input type="text" name="a-info" id="a-info" class="text-[#9F9F9F] border-1 border-[#9F9F9F] py-2.5 px-2.5 rounded-[8px]"
+                        placeholder="Additional Information">
                 </div>
-
             </form>
 
             <div class="placeOrder w-fit">
-                <div class="flex items-baseline gap-30 mb-3 w-fit">
+                <div class="flex items-baseline gap-30 mb-9 w-fit">
                     <div class="product space-y-3">
                         <h4 class="text-[24px] text-black font-bold">Product</h4>
                         <p class="text-[#9F9F9F]text-[16px]">Asgaard sofa X <span class="text-black">1</span></p>
@@ -103,24 +104,27 @@
                     </div>
                 </div>
 
-                <div class="hr border-1 border-[#D9D9D9]"></div>
+                <div class="hr border-1 border-[#D9D9D9] mb-12"></div>
                 
-                <div class="w-fit">
-                    <div class="checkbox1">
-                        <input type="checkbox" name="" id=""><label for="">Direct Bank Transfer</label>
+                <div class="w-fit space-y-5">
+                    <div class="checkbox1 space-y-5">
+                        <input type="radio" name="" id="">   <label for=""  class="pl-4">Direct Bank Transfer</label>
                         <p class="text-[#9F9F9F]">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
                     </div>
                     <div class="checkbox2">
-                        <input type="checkbox" name="" id=""><label for="" class="text-[#9F9F9F]">Direct Bank Transfer</label>
+                        <input type="radio" name="" id=""><label for="" class="text-[#9F9F9F] pl-4">Direct Bank Transfer</label>
                         <!-- <p class="">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p> -->
                     </div>
-                    <div class="checkbox3">
-                        <input type="checkbox" name="" id=""><label for="" class="text-[#9F9F9F]">Direct Bank Transfer</label>
+                    <div class="checkbox3 space-y-5">
+                        <input type="radio" name="" id=""><label for="" class="text-[#9F9F9F] pl-4">Direct Bank Transfer</label>
                         <p class="text-[16px] font-light">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a class="font-bold">privacy policy.</a></p>
                     </div>
 
                     <div class="orderLink flex">
-                        <a class="text-[20px] text-black border-1 px-10 py-2.5 rounded-[8px] ">Place order</a>
+                        <a class="text-[20px] text-black border-1 px-12 py-1.5 rounded-[8px] 
+                            mx-auto my-0 cursor-pointer hover:bg-green-600 hover:text-white ">
+                            Place order
+                        </a>
                     </div>
                 </div>
 
@@ -128,4 +132,43 @@
         </div>
     </div>
     <div class="checkout-total"></div>
+</div>
+
+<div class="frame flex justify-evenly items-baseline bg-[#FAF3EA] py-25">
+    <div class="flex items-center gap-4">
+        <div class="frame-image ">
+            <fa-icon [icon]="faTrophy" class="mr-0.5 text-5xl"></fa-icon>
+        </div>
+        <div class="flex flex-col">
+            <h4 class="text-[#242424] text-[25px] font-semibold">High Quality</h4>
+            <p class="text-[#898989] text-20px font-semibold">crafted from top materials</p>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <div class="frame-image ">
+            <fa-icon [icon]="faShield" class="mr-0.5 text-5xl"></fa-icon>
+        </div>
+        <div class="flex flex-col">
+            <h4 class="text-[#242424] text-[25px] font-semibold">Warranty Protection</h4>
+            <p class="text-[#898989] text-20px font-semibold">Over 2 years</p>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <div class="frame-image ">
+            <fa-icon [icon]="faTruck" class="mr-0.5 text-5xl"></fa-icon>
+        </div>
+        <div class="flex flex-col">
+            <h4 class="text-[#242424] text-[25px] font-semibold">Free Shipping</h4>
+            <p class="text-[#898989] text-20px font-semibold">Order over 150 $</p>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <div class="frame-image ">
+            <fa-icon [icon]="faHeadset" class="mr-0.5 text-5xl"></fa-icon>
+        </div>
+        <div class="flex flex-col">
+            <h4 class="text-[#242424] text-[25px] font-semibold">24 / 7 Support</h4>
+            <p class="text-[#898989] text-20px font-semibold">Dedicated support</p>
+        </div>
+    </div>
 </div>

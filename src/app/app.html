@@ -1,7 +1,9 @@
-<ng-template [ngIf]="isHomeRoute() || isShopRoute() || isSingleProductRoute() || isProductComparisonRoute() || isCartRoute() || isCheckoutRoute()">
+<ng-template [ngIf]="isHomeRoute() || isShopRoute() || isSingleProductRoute() || isProductComparisonRoute() || isCartRoute() || isCheckoutRoute()
+  || isContactRoute()|| isBlogRoute() ">
   <app-header></app-header>
 </ng-template>
 <router-outlet></router-outlet>
-<ng-template [ngIf]="isHomeRoute() || isHeaderRoute() || isShopRoute() || isSingleProductRoute() || isProductComparisonRoute() || isCartRoute() || isCheckoutRoute()">
+<ng-template [ngIf]="isHomeRoute() || isHeaderRoute() || isShopRoute() || isSingleProductRoute() || isProductComparisonRoute() || isCartRoute() || isCheckoutRoute()
+   || isContactRoute()|| isBlogRoute()">
   <app-footer></app-footer>
 </ng-template>

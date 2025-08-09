@@ -7,6 +7,8 @@ import { SingleProduct } from './single-product/single-product';
 import { ProductComparison } from './product-comparison/product-comparison';
 import { Cart } from './cart/cart';
 import { Checkout } from './checkout/checkout';
+import { Contact } from './contact/contact';
+import { Blog } from './blog/blog';
 
 export const routes: Routes = [
     
@@ -51,7 +53,18 @@ export const routes: Routes = [
     }
     ,
     {
+        path: 'contact-page',
+        component: Contact
+    }
+    ,
+    {
+        path: 'blog-page',
+        component: Blog
+    }
+    ,
+    {
         path: 'footer-page',
         component: Footer
     }
+    
 ];

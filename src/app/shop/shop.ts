@@ -35,7 +35,7 @@ export class Shop {
   }
   // Array to track overlays for product cards 2-8 (index 0 = card 2, index 6 = card 8)
   showOverlays: boolean[] = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
-
+ 
 
   showOverlay(idx: number, event: Event) {
     event.stopPropagation(); // Prevent document click from firing
@@ -54,5 +54,9 @@ export class Shop {
 
   productDetail() {
     this.route.navigate(['single-product-page']);
+  }
+
+  redirectToComparison() {
+    this.route.navigate(['product-comparison-page']);
   }
 }

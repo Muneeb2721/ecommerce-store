@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faShare, faHeart, faCodeCompare, faArrowRight, faArrowLeft, faMinus, faCircle, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -26,11 +26,30 @@ export class Home {
 
   constructor(public route: Router) { }
 
-  toggleOverlay(idx: number) {
-    this.showOverlays[idx] = !this.showOverlays[idx];
-  }
+  showOverlay(idx: number, event: Event) {
+      event.stopPropagation(); // Prevent document click from firing
+      this.showOverlays = this.showOverlays.map((_, i) => i === idx);
+    }
+  
+    // Hide all overlays when clicking outside
+    @HostListener('document:click', ['$event'])
+    onDocumentClick(event: Event) {
+      this.showOverlays = this.showOverlays.map(() => false);
+    }
 
   show(){
-    this.route.navigate(['header-page'])
+    this.route.navigate(['cart-page'])
+  }
+
+  redirectToCart(){
+    this.route.navigate(['cart-page']);
+  }
+
+  redirectToComparison(){
+    this.route.navigate(['product-comparison-page']);
+  }
+
+  productDetail() {
+    this.route.navigate(['single-product-page']);
   }
 }

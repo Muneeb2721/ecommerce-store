@@ -2,7 +2,7 @@
   <header class="h-[80px] bg-white" >
     <div class="navbar flex relative top-[7px] justify-around items-center
       ">
-      <div class="logo group flex items-center cursor-pointer">
+      <div class="logo group flex items-center cursor-pointer" (click)="homePage()">
         <img src="/assets/imgHome/logo.png" alt="Logo Image" class="w-[65px] h-[65px]" />
         <h1 class="font-montserrat text-[34px] font-bold relative right-[5px]">Furniro</h1>   
       </div>
@@ -12,7 +12,7 @@
           <li class=""><a (click)="homePage()" class="">Home</a></li>
           <li class=""><a (click)="shopPage()" class="">Shop</a></li>
           <li class=""><a routerLink="/about-page" class="">About</a></li>
-          <li class=""><a routerLink="/header-page" class="">Contact</a></li>
+          <li class=""><a (click)="contactPage()" class="">Contact</a></li>
         </ul>
       </div>
       <div class="icons flex cursor-pointer
@@ -20,7 +20,7 @@
         <fa-icon [icon]="faUser" class=""></fa-icon>
         <fa-icon [icon]="faSearch" class=""></fa-icon>
         <fa-icon [icon]="faHeart" class=""></fa-icon>
-        <fa-icon [icon]="faShoppingCart" class=""></fa-icon>
+        <fa-icon [icon]="faShoppingCart" class="" (click)="redirectToCart()" ></fa-icon>
       </div>
     </div>
   </header>

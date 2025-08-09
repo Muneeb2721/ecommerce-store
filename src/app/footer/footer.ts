@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -7,5 +8,20 @@ import { Component } from '@angular/core';
   styleUrl: './footer.css'
 })
 export class Footer {
+  constructor(private route:Router){}
 
+  redirectToHome() {
+    this.route.navigate(['home-page']);
+  }
+
+  redirectToShop() {
+    this.route.navigate(['shop-page']);
+  }
+
+  redirectToContact() {
+    this.route.navigate(['contact-page']);
+  }
+  redirectToBlog(){
+    this.route.navigate(['blog-page']);
+  }
 }

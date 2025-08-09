@@ -47,4 +47,12 @@ export class App {
   isCheckoutRoute() {
     return this.route.url === '/checkout-page';
   } 
+
+  isContactRoute() {
+    return this.route.url === '/contact-page';
+  }
+
+  isBlogRoute() {
+    return this.route.url === '/blog-page';
+  }
 }

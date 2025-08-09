@@ -26,6 +26,13 @@ export class Header {
 
   shopPage() {
     this.route.navigate(['shop-page']);
-   }
+  }
 
+  contactPage() {
+    this.route.navigate(['contact-page']);
+  }
+
+  redirectToCart() {
+    this.route.navigate(['cart-page']);
+  }
 }
