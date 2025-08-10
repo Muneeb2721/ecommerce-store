@@ -1,27 +1,67 @@
-<div class="header" >
-  <header class="h-[80px] bg-white" >
-    <div class="navbar flex relative top-[7px] justify-around items-center
-      ">
-      <div class="logo group flex items-center cursor-pointer" (click)="homePage()">
+<div class="header">
+
+<header class="h-[70px] bg-white border-1">
+
+    <div class="navbar flex relative top-[7px] items-center
+      lg2:justify-around lg2:px-0 lg1:justify-around lg1:px-0 
+      md2:justify-around md2:px-0 md1:justify-between md1:px-10 
+      sm2:justify-between sm2:px-10 sm1:justify-between sm1:px-10 
+      justify-between px-10">
+
+      <div (click)="homePage()"
+        class="logo group flex items-center cursor-pointer">
         <img src="/assets/imgHome/logo.png" alt="Logo Image" class="w-[65px] h-[65px]" />
-        <h1 class="font-montserrat text-[34px] font-bold relative right-[5px]">Furniro</h1>   
+        <h1 class="font-montserrat text-[34px] font-bold relative right-[5px]">Furniro</h1>
       </div>
-      <div class="nav relative left-12">
-        <ul class="flex font-poppins text-[16px] font-medium cursor-pointer
-            space-x-16">
-          <li class=""><a (click)="homePage()" class="">Home</a></li>
-          <li class=""><a (click)="shopPage()" class="">Shop</a></li>
-          <li class=""><a routerLink="/about-page" class="">About</a></li>
-          <li class=""><a (click)="contactPage()" class="">Contact</a></li>
-        </ul>
+
+      <div class="desktop-menu gap-25 items-center 
+        lg2:flex lg1:flex md2:flex md1:hidden sm2:hidden sm1:hidden hidden">
+        <div class="nav">
+          <ul class="flex font-poppins text-[16px] font-medium cursor-pointer gap-6
+             ">
+            <li class=""><a (click)="homePage()" class="">Home</a></li>
+            <li class=""><a (click)="shopPage()" class="">Shop</a></li>
+            <li class=""><a class="">About</a></li>
+            <li class=""><a (click)="contactPage()" class="">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="icons flex cursor-pointer gap-10">
+          <fa-icon [icon]="faUser" class=""></fa-icon>
+          <fa-icon [icon]="faSearch" class=""></fa-icon>
+          <fa-icon [icon]="faHeart" class=""></fa-icon>
+          <fa-icon [icon]="faShoppingCart" class="" (click)="redirectToCart()"></fa-icon>
+        </div>
       </div>
-      <div class="icons flex cursor-pointer
-            space-x-16">
-        <fa-icon [icon]="faUser" class=""></fa-icon>
-        <fa-icon [icon]="faSearch" class=""></fa-icon>
-        <fa-icon [icon]="faHeart" class=""></fa-icon>
-        <fa-icon [icon]="faShoppingCart" class="" (click)="redirectToCart()" ></fa-icon>
+
+      <div class="ham-burger md2:hidden lg1:hidden lg2:hidden">
+        <fa-icon [icon]="fahamburger" class="text-4xl text-red-600 cursor-pointer"
+          (click)="showMobileMenu()" (blur)="hideMobileMenu()" >
+        </fa-icon>
       </div>
     </div>
-  </header>
+
+    <div id="mobile-menu" class="invisible bg-gray-50 border-1 absolute h-full w-2/3 px-5 py-8 space-y-10 top-20 right-0
+         lg1:hidden lg2:hidden
+         md1:w-1/3 md2:hidden
+         sm2:w-1/2">
+        
+        <div class="nav">
+          <ul class="font-poppins text-[16px] font-medium space-y-10">
+            <li class=""><a (click)="homePage()" class="cursor-pointer">Home</a></li>
+            <li class=""><a (click)="shopPage()" class="cursor-pointer">Shop</a></li>
+            <li class=""><a class="cursor-pointer">About</a></li>
+            <li class=""><a (click)="contactPage()" class="cursor-pointer">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="icons cursor-pointer space-x-15">
+          <fa-icon [icon]="faUser" class="cursor-pointer"></fa-icon>
+          <fa-icon [icon]="faSearch" class="cursor-pointer"></fa-icon>
+          <fa-icon [icon]="faHeart" class="cursor-pointer"></fa-icon>
+          <fa-icon [icon]="faShoppingCart" class="cursor-pointer" (click)="redirectToCart()"></fa-icon>
+        </div>
+    
+    </div>
+</header>
 </div>

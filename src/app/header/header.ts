@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faUser, faSearch, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faSearch, faHeart, faShoppingCart, faHamburger, faHandMiddleFinger } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +15,7 @@ export class Header {
   faSearch = faSearch; 
   faHeart = faHeart;
   faShoppingCart = faShoppingCart;
+  fahamburger = faHamburger
 
   constructor(private route: Router) {
 
@@ -34,5 +35,19 @@ export class Header {
 
   redirectToCart() {
     this.route.navigate(['cart-page']);
+  }
+
+  showMobileMenu() {
+    const menu=document.getElementById('mobile-menu');
+    if (menu) {
+      menu.classList.toggle('visible');
+    }
+  }
+  
+  hideMobileMenu() {
+    const menu=document.getElementById('mobile-menu');
+    if (menu) {
+      document.body.classList.toggle('invisible');
+    }
   }
 }
