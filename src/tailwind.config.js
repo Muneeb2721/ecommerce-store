@@ -3,6 +3,8 @@ module.exports = {
   content: ['./src/**/*.{html,ts}'],
   theme: {
     screens: {
+      xs1: { max: '339px' },
+      xs2: { min: '340px', max: '639px' },
       sm1: { min: '640px', max: '703px' },
       sm2: { min: '704px', max: '767px' },
       md1: { min: '768px', max: '929px' },
@@ -15,4 +17,3 @@ module.exports = {
   },
   plugins: []
 }
- 
