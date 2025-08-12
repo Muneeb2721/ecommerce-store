@@ -14,7 +14,7 @@ export const routes: Routes = [
     
     {
     path: '',
-    redirectTo: 'header-page',
+    redirectTo: 'home-page',
     pathMatch: 'full' // ✅ Important
   },
     {
