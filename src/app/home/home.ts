@@ -49,7 +49,11 @@ export class Home {
     this.route.navigate(['product-comparison-page']);
   }
 
-  productDetail() {
+  productDetail(){
     this.route.navigate(['single-product-page']);
+  }
+
+  redirectToShop(){
+    this.route.navigate(['shop-page']);
   }
 }

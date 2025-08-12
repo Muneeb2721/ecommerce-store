@@ -1,72 +1,136 @@
 <div class="banner h-[40rem] w-full relative top-0 bg-cover bg-center mb-12"
     style="background-image: url('assets/imgHome/scandivle.jpg')">
-    <div class="arrival bg-[#FFF3E3] font-poppins w-[600px] h-[423px] rounded-[10px] relative left-[51%] top-30">
-        <div class="text relative left-5 top-15 w-fit">
+
+    <div class="arrival bg-[#FFF3E3] font-poppins h-[423px] rounded-[10px] relative top-30
+        lg2:w-[47%] lg2:left-[51%]
+        lg1:w-[47%] lg1:left-[51%]
+        md2:left-[38%] md2:w-[60%]
+        md1:left-[36%] md1:w-[60%]
+        sm2:left-[28%] sm2:w-[70%]
+        sm1:left-[5%] sm1:w-[90%]
+        left-4 w-[95%]">
+        <div class="text relative left-5 top-15 w-[90%]">
             <h4 class="text-[#333333] text-[16px] font-light tracking-wide w-fit">
                 New Arrival
             </h4>
-            <h1 class="text-[#B88E2F] text-[52px] font-bold leading-[65px] w-fit">
+            <h1 class="text-[#B88E2F] text-[52px] leading-[65px] font-bold">
                 Discover Our New Collection
             </h1>
-            <p class="text-[18px] text-[#333333]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit <br />
+            <p class="text-[18px] text-[#333333] w-fit">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
                 tellus, luctus nec ullamcorper mattis.
             </p>
         </div>
         <div class="common-btn relative left-6 top-25 max-w-fit">
-            <button type="button" class="bg-[#B88E2F] text-white text-[16px] py-[20px] px-[75px]">
+            <button type="button" class="bg-[#B88E2F] text-white text-[16px] py-[20px] px-[75px] cursor-pointer"
+                (click)="redirectToShop()">
                 BUY NOW
             </button>
         </div>
     </div>
 </div>
 
-<div class="categories my-0 mx-auto mb-24">
+<div class="categories mb-24">
     <h2 class="font-poppins text-[#333333] text-[32px] text-center font-semibold">
         Browse The Range
     </h2>
+
     <p class="font-poppins text-[#666666] text-[20px] text-center mb-12">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </p>
 
-    <div class="categories-card flex justify-center space-x-4">
-        <div class="card-1 w-1/4 h-96">
-            <img src="assets/imgHome/image10.png" alt="Dining" class="object- h-full rounded-[8px] mb-1" />
+    <div class="categories-card flex justify-center gap-4
+        xs2:flex-wrap xs2:gap-17 ">
+
+        <div class="card-1 h-96 rounded-[10px]
+            lg2:w-1/4
+            lg1:w-1/4
+            md2:w-1/4
+            md1:w-[30%]
+            sm2:w-[40%]
+            sm1:w-[30%]
+            xs2:w-[75%]">
+            <img src="assets/imgHome/image10.png" alt="Dining" class="object-cover h-full rounded-[8px] mb-1" />
             <h4 class="font-poppins text-[#333333] text-[24px] text-center">
                 Dining
             </h4>
         </div>
-        <div class="card-2 w-1/4 h-96 rounded-[10px]">
-            <img src="assets/imgHome/image16.png" alt="Living" class="w-full h-full rounded-[8px] mb-1" />
+
+        <div class="card-2 h-96 rounded-[10px]
+            lg2:w-1/4
+            lg1:w-1/4
+            md2:w-1/4
+            md1:w-[30%]
+            sm2:w-[40%]
+            sm1:w-[30%]
+            xs2:w-[75%]">
+            <img src="assets/imgHome/image16.png" alt="Living" class="object-cover h-full rounded-[8px] mb-1" />
             <h4 class="font-poppins text-[#333333] text-[24px] text-center">
                 Living
             </h4>
         </div>
-        <div class="card-3 w-1/4 h-96 rounded-[10px]">
-            <img src="assets/imgHome/image5.png" alt="Bedroom" class="w-full h-full rounded-[8px] mb-1" />
+
+        <div class="card-3 h-96 rounded-[10px]
+            lg2:w-1/4
+            lg1:w-1/4
+            md2:w-1/4
+            md1:w-[30%]
+            sm2:w-[40%]
+            sm1:w-[30%]
+            xs2:w-[75%]">
+            <img src="assets/imgHome/image5.png" alt="Bedroom" class="object-cover h-full rounded-[8px] mb-1" />
             <h4 class="font-poppins text-[#333333] text-[24px] text-center">
                 Bedroom
             </h4>
         </div>
+
     </div>
 </div>
 
 <div class="product mb-16">
+
     <h2 class="font-poppins text-[#333333] text-[32px] text-center font-semibold mb-12">
         Our Products
     </h2>
 
-    <div class="products-card flex justify-center space-x-4 flex-wrap space-y-28">
-        <div class="product-card-1 w-1/5 h-96 rounded-[10px]">
+    <div class="products-card flex justify-center gap-4 flex-wrap space-y-20
+        xs2:gap-1
+        sm1:gap-2
+        sm2:gap-3
+        md1:gap-2
+        md2:gap-2
+        lg1:gap-2">
+        <div class="product-card-1 w-1/5 h-96 rounded-[10px]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center"
                 style="background-image: url('assets/imgHome/image8.png')" (click)="showOverlay(0, $event)">
-                <div
-                    class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1">
+                <div class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1
+                        xs2:left-[75%]
+                        sm1:left-[80%]
+                        sm2:left-[80%]
+                        md1:left-[78%]
+                        md2:left-[77%]
+                        lg1:left-[76%]
+                        lg2:left-[78%]">
                     -30%
                 </div>
             </div>
-            <div class="product-description bg-[#F4F5F7]">
-                <div class="product-name py-2 px-4">
+
+            <div class="product-description bg-[#F4F5F7]
+            xs2:px-2
+            sm1:px-4
+            sm2:px-4
+            md1:px-1
+            md2:px-4
+            lg1:px-2
+            lg2:px-1">
+                <div class="product-name py-2">
                     <div class="flex justify-between items-baseline">
                         <h3 class="font-semibold text-[#3A3A3A] text-[24px]">Syltherine</h3>
                         <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
@@ -74,10 +138,12 @@
                     </div>
                     <p class="text-[#898989] text-[16px]">Stylish cafe chair</p>
                 </div>
-                <div class="product-price flex justify-around items-center py-4 px-4">
-                    <h4 class="font-semibold text-[#3A3A3A] text-[20px]">Rp 2.500.000</h4>
-                    <p class="text-[#898989] text-[16px] line-through">Rp 3.500.000</p>
+
+                <div class="product-price flex justify-between items-center py-4">
+                    <h4 class="font-semibold text-[#3A3A3A] text-[20px]">Rp 2,500.000</h4>
+                    <p class="text-[#898989] text-[16px] line-through">Rp 3,500.000</p>
                 </div>
+
             </div>
             <div class="overlay flex flex-col justify-center items-center relative bottom-114.5 h-114.5 bg-[#3A3A3A] opacity-80"
                 [class.hidden]="!showOverlays[0]">
@@ -88,12 +154,12 @@
                     </button>
                 </div>
 
-                <!-- Action Icons -->
                 <div class="overlay-action-bar text-center space-x-3 z-50">
                     <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
                     </a>
-                    <a (click)="redirectToComparison()" class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
                     </a>
                     <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
@@ -103,16 +169,36 @@
             </div>
         </div>
 
-        <div class="product-card-2 w-1/5 h-96 rounded-[10px]">
+        <div class="product-card-2 w-1/5 h-96 rounded-[10px]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center"
                 style="background-image: url('assets/imgHome/image22.png')" (click)="showOverlay(1, $event)">
-                <div
-                    class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1">
+                <div class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1
+                        xs2:left-[75%]
+                        sm1:left-[80%]
+                        sm2:left-[80%]
+                        md1:left-[78%]
+                        md2:left-[77%]
+                        lg1:left-[76%]
+                        lg2:left-[78%]">
                     -30%
                 </div>
             </div>
-            <div class="product-description bg-[#F4F5F7]">
-                <div class="product-name py-2 px-4">
+            <div class="product-description bg-[#F4F5F7]
+                xs2:px-2
+                sm1:px-4
+                sm2:px-4
+                md1:px-1
+                md2:px-4
+                lg1:px-2
+                lg2:px-1">
+                <div class="product-name py-2">
                     <div class="flex justify-between items-baseline">
                         <h3 class="font-semibold text-[#3A3A3A] text-[24px]">Leviosa</h3>
                         <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
@@ -122,8 +208,8 @@
 
                     <p class="text-[#898989] text-[16px]">Stylish cafe chair</p>
                 </div>
-                <div class="product-price flex items-center justify-around py-4 px-4">
-                    <h4 class="font-semibold text-[#3A3A3A] text-[20px]">Rp 2500.00</h4>
+                <div class="product-price flex justify-between items-center py-4">
+                    <h4 class="font-semibold text-[#3A3A3A] text-[20px]">Rp 2500,00</h4>
                     <p class="text-[#898989] text-[16px] line-through invisible">Rp 23,000.000</p>
                 </div>
             </div>
@@ -136,12 +222,12 @@
                     </button>
                 </div>
 
-                <!-- Action Icons -->
                 <div class="overlay-action-bar text-center space-x-3 z-50">
                     <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
                     </a>
-                    <a (click)="redirectToComparison()" class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
                     </a>
                     <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
@@ -151,17 +237,37 @@
             </div>
         </div>
 
-        <div class="product-card-3 w-1/5 h-96 rounded-[10px]">
+        <div class="product-card-3 w-1/5 h-96 rounded-[10px]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center"
                 style="background-image: url('assets/imgHome/image13.png')" (click)="showOverlay(2, $event)">
 
-                <div
-                    class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1">
+                <div class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1
+                    xs2:left-[75%]
+                    sm1:left-[80%]
+                    sm2:left-[80%]
+                    md1:left-[78%]
+                    md2:left-[77%]
+                    lg1:left-[76%]
+                    lg2:left-[78%]">
                     -50%
                 </div>
             </div>
-            <div class="product-description bg-[#F4F5F7]">
-                <div class="product-name py-2 px-4">
+            <div class="product-description bg-[#F4F5F7]
+                xs2:px-2
+                sm1:px-4
+                sm2:px-4
+                md1:px-1
+                md2:px-4
+                lg1:px-2
+                lg2:px-1">
+                <div class="product-name py-2">
                     <div class="flex justify-between items-baseline">
                         <h3 class="font-semibold text-[#3A3A3A] text-[24px]">Lolito</h3>
                         <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
@@ -171,8 +277,8 @@
 
                     <p class="text-[#898989] text-[16px]">Luxury big sofa</p>
                 </div>
-                <div class="product-price flex justify-between items-center py-4 px-4">
-                    <h4 class="font-semibold text-[#3A3A3A] text-[20px]">Rp 7.000.000</h4>
+                <div class="product-price flex justify-between items-center py-4">
+                    <h4 class="font-semifont-semibold text-[#3A3A3A] text-[20px]">Rp 7.000.000</h4>
                     <p class="text-[#898989] text-[16px] line-through">Rp 14.000.000</p>
                 </div>
             </div>
@@ -185,12 +291,12 @@
                     </button>
                 </div>
 
-                <!-- Action Icons -->
                 <div class="overlay-action-bar text-center space-x-3 z-50">
                     <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
                     </a>
-                    <a (click)="redirectToComparison()" class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
                     </a>
                     <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
@@ -200,16 +306,36 @@
             </div>
         </div>
 
-        <div class="product-card-4 w-1/5 h-96 rounded-[10px]">
+        <div class="product-card-4 w-1/5 h-96 rounded-[10px]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center"
                 style="background-image: url('assets/imgHome/image1.jpg')" (click)="showOverlay(3, $event)">
-                <div
-                    class="saleOffer relative left-50 top-2 bg-[#2EC1AC] text-white text-center font-poppins rounded-full w-fit py-3 px-2">
+                <div class="saleOffer relative left-50 top-2 bg-[#2EC1AC] text-white text-center font-poppins rounded-full w-fit py-3 px-2
+                    xs2:left-[75%]
+                    sm1:left-[80%]
+                    sm2:left-[80%]
+                    md1:left-[78%]
+                    md2:left-[77%]
+                    lg1:left-[76%]
+                    lg2:left-[78%]">
                     New
                 </div>
             </div>
-            <div class="product-description bg-[#F4F5F7]">
-                <div class="product-name py-2 px-4">
+            <div class="product-description bg-[#F4F5F7]
+            xs2:px-2
+            sm1:px-4
+            sm2:px-4
+            md1:px-1
+            md2:px-4
+            lg1:px-2
+            lg2:px-1">
+                <div class="product-name py-2">
                     <div class="flex justify-between items-baseline">
                         <h3 class="font-semibold text-[#3A3A3A] text-[24px]">Respira</h3>
                         <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
@@ -219,7 +345,7 @@
 
                     <p class="text-[#898989] text-[16px]">Outdoor bar table and stool</p>
                 </div>
-                <div class="product-price flex justify-around items-center py-4 px-4">
+                <div class="product-price flex justify-between items-center py-4">
                     <h4 class="font-semibold text-[#3A3A3A] text-[20px]">Rp 500.000</h4>
                     <p class="text-[#898989] text-[16px] line-through invisible">Rp 23,000.000</p>
                 </div>
@@ -233,12 +359,12 @@
                     </button>
                 </div>
 
-                <!-- Action Icons -->
                 <div class="overlay-action-bar text-center space-x-3 z-50">
                     <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
                     </a>
-                    <a (click)="redirectToComparison()" class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
                     </a>
                     <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
@@ -248,16 +374,36 @@
             </div>
         </div>
 
-        <div class="product-card-5 w-1/5 h-96 rounded-[10px]">
+        <div class="product-card-5 w-1/5 h-96 rounded-[10px] 
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center"
                 style="background-image: url('assets/imgHome/image4.png')" (click)="showOverlay(4, $event)">
-                <div
-                    class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1">
+                <div class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1
+                    xs2:left-[75%]
+                    sm1:left-[80%]
+                    sm2:left-[80%]
+                    md1:left-[78%]
+                    md2:left-[77%]
+                    lg1:left-[76%]
+                    lg2:left-[78%]">
                     -30%
                 </div>
             </div>
-            <div class="product-description bg-[#F4F5F7]">
-                <div class="product-name py-2 px-4">
+            <div class="product-description bg-[#F4F5F7]
+            xs2:px-2
+            sm1:px-4
+            sm2:px-4
+            md1:px-1
+            md2:px-4
+            lg1:px-2
+            lg2:px-1">
+                <div class="product-name py-2">
                     <div class="flex justify-between items-baseline">
                         <h3 class="font-semibold text-[#3A3A3A] text-[24px]">Grifo</h3>
                         <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
@@ -267,7 +413,7 @@
 
                     <p class="text-[#898989] text-[16px]">Night lamp</p>
                 </div>
-                <div class="product-price flex justify-around items-center py-4 px-4">
+                <div class="product-price flex justify-between items-center py-4">
                     <h4 class="font-semibold text-[#3A3A3A] text-[20px]">Rp 1.500.000</h4>
                     <p class="text-[#898989] text-[16px] line-through invisible">Rp 23,000.000</p>
                 </div>
@@ -281,12 +427,12 @@
                     </button>
                 </div>
 
-                <!-- Action Icons -->
                 <div class="overlay-action-bar text-center space-x-3 z-50">
                     <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
                     </a>
-                    <a (click)="redirectToComparison()" class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
                     </a>
                     <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
@@ -296,16 +442,36 @@
             </div>
         </div>
 
-        <div class="product-card-6 w-1/5 h-96 rounded-[10px]">
+        <div class="product-card-6 w-1/5 h-96 rounded-[10px]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center"
                 style="background-image: url('assets/imgHome/image8.png')" (click)="showOverlay(5, $event)">
-                <div
-                    class="saleOffer relative left-50 top-2 bg-[#2EC1AC] text-white text-center font-poppins rounded-full w-fit py-3 px-2">
+                <div class="saleOffer relative left-50 top-2 bg-[#2EC1AC] text-white text-center font-poppins rounded-full w-fit py-3 px-2
+                    xs2:left-[75%]
+                    sm1:left-[80%]
+                    sm2:left-[80%]
+                    md1:left-[78%]
+                    md2:left-[77%]
+                    lg1:left-[76%]
+                    lg2:left-[78%]">
                     New
                 </div>
             </div>
-            <div class="product-description bg-[#F4F5F7]">
-                <div class="product-name py-2 px-4">
+            <div class="product-description bg-[#F4F5F7]
+            xs2:px-2
+            sm1:px-4
+            sm2:px-4
+            md1:px-1
+            md2:px-4
+            lg1:px-2
+            lg2:px-1">
+                <div class="product-name py-2">
                     <div class="flex justify-between items-baseline">
                         <h3 class="font-semibold text-[#3A3A3A] text-[24px]">Muggo</h3>
                         <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
@@ -315,7 +481,7 @@
 
                     <p class="text-[#898989] text-[16px]">Small mug</p>
                 </div>
-                <div class="product-price flex justify-around items-center py-4 px-4">
+                <div class="product-price flex justify-between items-center py-4">
                     <h4 class="font-semibold text-[#3A3A3A] text-[20px]">Rp 150.000</h4>
                     <p class="text-[#898989] text-[16px] line-through invisible">Rp 23,000.000</p>
                 </div>
@@ -329,12 +495,13 @@
                     </button>
                 </div>
 
-                <!-- Action Icons -->
+
                 <div class="overlay-action-bar text-center space-x-3 z-50">
                     <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
                     </a>
-                    <a (click)="redirectToComparison()" class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
                     </a>
                     <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
@@ -344,16 +511,36 @@
             </div>
         </div>
 
-        <div class="product-card-7 w-1/5 h-96 rounded-[10px]">
+        <div class="product-card-7 w-1/5 h-96 rounded-[10px]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center"
                 style="background-image: url('assets/imgHome/image3.jpg')" (click)="showOverlay(6, $event)">
-                <div
-                    class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1">
+                <div class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1
+                    xs2:left-[75%]
+                    sm1:left-[80%]
+                    sm2:left-[80%]
+                    md1:left-[78%]
+                    md2:left-[77%]
+                    lg1:left-[76%]
+                    lg2:left-[78%]">
                     -50%
                 </div>
             </div>
-            <div class="product-description bg-[#F4F5F7]">
-                <div class="product-name py-2 px-4">
+            <div class="product-description bg-[#F4F5F7]
+            xs2:px-2
+            sm1:px-4
+            sm2:px-4
+            md1:px-1
+            md2:px-4
+            lg1:px-2
+            lg2:px-1">
+                <div class="product-name py-2">
                     <div class="flex justify-between items-baseline">
                         <h3 class="font-semibold text-[#3A3A3A] text-[24px]">Pingky</h3>
                         <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
@@ -363,7 +550,7 @@
 
                     <p class="text-[#898989] text-[16px]">Cute bed set</p>
                 </div>
-                <div class="product-price flex justify-around items-center py-4 px-4">
+                <div class="product-price flex justify-between items-center py-4">
                     <h4 class="font-semibold text-[#3A3A3A] text-[20px]">Rp 7.000.000</h4>
                     <p class="text-[#898989] text-[16px] line-through">Rp 14.000.000</p>
                 </div>
@@ -377,12 +564,13 @@
                     </button>
                 </div>
 
-                <!-- Action Icons -->
+
                 <div class="overlay-action-bar text-center space-x-3 z-50">
                     <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
                     </a>
-                    <a (click)="redirectToComparison()" class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
                     </a>
                     <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
@@ -392,16 +580,36 @@
             </div>
         </div>
 
-        <div class="product-card-8 w-1/5 h-96 rounded-[10px]">
+        <div class="product-card-8 w-1/5 h-96 rounded-[10px]
+        xs2:w-[49%]
+        sm1:w-[46%]
+        sm2:w-[40%]
+        md1:w-[30%]
+        md2:w-[27%]
+        lg1:w-[23%]
+        lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center"
                 style="background-image: url('assets/imgHome/image9.jpg')" (click)="showOverlay(7, $event)">
-                <div
-                    class="saleOffer relative left-50 top-2 bg-[#2EC1AC] text-white text-center font-poppins rounded-full w-fit py-3 px-2">
+                <div class="saleOffer relative left-45 top-2 bg-[#2EC1AC] text-white text-center font-poppins rounded-full w-fit py-3 px-2
+                    xs2:left-[75%]
+                    sm1:left-[80%]
+                    sm2:left-[80%]
+                    md1:left-[78%]
+                    md2:left-[77%]
+                    lg1:left-[76%]
+                    lg2:left-[78%]">
                     New
                 </div>
             </div>
-            <div class="product-description bg-[#F4F5F7]">
-                <div class="product-name py-2 px-4">
+            <div class="product-description bg-[#F4F5F7]
+            xs2:px-2
+            sm1:px-4
+            sm2:px-4
+            md1:px-1
+            md2:px-4
+            lg1:px-2
+            lg2:px-1">
+                <div class="product-name py-2">
                     <div class="flex justify-between items-baseline">
                         <h3 class="font-semibold text-[#3A3A3A] text-[24px]">Potty</h3>
                         <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
@@ -411,7 +619,7 @@
 
                     <p class="text-[#898989] text-[16px]">Minimalist flower pot</p>
                 </div>
-                <div class="product-price flex justify-around items-center py-4 px-4">
+                <div class="product-price flex justify-between items-center py-4">
                     <h4 class="font-semibold text-[#3A3A3A] text-[20px]">Rp 500.000</h4>
                     <p class="text-[#898989] text-[16px] line-through invisible">Rp 23,000.000</p>
                 </div>
@@ -425,12 +633,13 @@
                     </button>
                 </div>
 
-                <!-- Action Icons -->
+
                 <div class="overlay-action-bar text-center space-x-3 z-50">
                     <a (click)="show()" class="share text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faShare" class="mr-1"></fa-icon> Share
                     </a>
-                    <a (click)="redirectToComparison()" class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
+                    <a (click)="redirectToComparison()"
+                        class="compare text-[16px] text-white inline-flex items-center cursor-pointer">
                         <fa-icon [icon]="faCompare" class="mr-1"></fa-icon> Compare
                     </a>
                     <a (click)="show()" class="like text-[16px] text-white inline-flex items-center cursor-pointer">
@@ -441,103 +650,195 @@
         </div>
     </div>
 
-    <div class="product-button-btn w-fit my-0 mx-auto">
-        <button type="button" class="font-bold border-1 border-[#B88E2F] text-[#B88E2F] bg-white px-8 py-2 w-fit cursor-pointer">Show more</button>
+    <div class="product-button-btn w-fit my-5 mx-auto">
+
+        <button type="button"
+            class="font-bold border-1 border-[#B88E2F] text-[#B88E2F] bg-white px-8 py-2 w-fit cursor-pointer rounded-[7px]"
+            (click)="redirectToShop()">
+            Show more
+        </button>
     </div>
+
 </div>
 
-<div class="inspirations bg-[#FCF8F3] font-poppins flex mb-14">
-    <div class="inspiration-heading flex flex-col justify-center items-start space-y-8 px-6">
-        <h2 class="text-[40px] text-[#3A3A3A] font-semibold leading-[1.2] w-[30rem] px-5">
+<div class="inspirations bg-[#FCF8F3] font-poppins flex mb-14
+    xs2:flex-col
+    sm1:flex-col
+    sm2:flex-col
+    md1:flex-col">
+
+    <div class="inspiration-heading flex flex-col justify-center items-start gap-8 px-6">
+
+        <h2 class="text-[40px] text-[#3A3A3A] font-semibold leading-[1.2] w-[30rem] px-5 
+            xs2:mt-5 xs2:text-[35px] xs2:w-fit 
+            sm1:mt-5 sm1:text-[35px] sm1:w-fit 
+            sm2:mt-5 sm2:text-[38px] sm2:w-fit 
+            md1:mt-5 md1:text-[40px] ">
             50+ Beautiful rooms inspiration
         </h2>
-        <p class="text-[16px] text-[#616161] leading-[1.3] w-[30rem] px-5">
+
+        <p class="text-[16px] text-[#616161] leading-[1.3] w-[30rem] px-5
+            xs2:w-fit sm1:w-fit">
             Our designer already made a lot of beautiful prototipe of rooms that inspire you
         </p>
-        <button type="submit" class="bg-[#B88E2F] text-[16px] text-white px-9 py-3 relative left-5 cursor-pointer">Explore More</button>
+
+        <button type="submit"
+            class="bg-[#B88E2F] text-[16px] text-white px-9 py-3 relative left-5 cursor-pointer rounded-[6px]"
+            (click)="redirectToShop()">
+            Explore More
+        </button>
+
     </div>
 
     <div class="carousel flex flex-col overflow-x-hidden">
-        <!-- <div class="prev-btn">
-            <fa-icon [icon]="faCircleChevronLeft" class=""></fa-icon>
-        </div> -->
-            <div class="carousel-cards flex  cursor-pointergap-4 mt-6">
-                <div class="carousel-card-1 h-[35rem] bg-cover flex items-end pl-8 pr-9 py-8" style="background-image: url('assets/imgHome/image20.png')">
-                    <div class="description bg-white px-4 py-8 space-y-1 opacity-[0.86]">
-                        <p class="text-[#616161] text-[18px] font-bold w-fit">01 <fa-icon [icon]="faLineChart" class=""></fa-icon> Bed Room </p>
-                        <h3 class="text-[28px] text-[#3A3A3A] font-semibold w-fit">Inner Peace</h3>
-                    </div>
-                    <div class="forwardArrow bg-[#B88E2F] px-4 py-2 border-1 border-solid border-[#B88E2F]">
-                        <fa-icon [icon]="faArrowRight" class="text-white text-[20px] cursor-pointer"></fa-icon>
-                    </div>
+
+        <div class="carousel-cards flex gap-4 mt-6
+            xs2:flex-col sm1:flex-col
+            md1:px-4
+            md2:gap-1">
+
+            <div class="carousel-card-1 h-[35rem] bg-cover flex items-end pl-8 pr-9 py-8
+                xs2:h-[30rem] xs2:mx-auto xs2:w-fit
+                sm1:mx-auto"
+                style="background-image: url('assets/imgHome/image20.png')">
+                
+                <div class="description bg-white px-4 py-8 space-y-1 opacity-[0.86]">
+                    <p class="text-[#616161] text-[18px] font-bold w-fit">01 <fa-icon [icon]="faLineChart"
+                            class=""></fa-icon> Bed Room </p>
+                    <h3 class="text-[28px] text-[#3A3A3A] font-semibold w-fit">Inner Peace</h3>
                 </div>
-                <div class="carousel-card-2 h-[28rem] bg-cover flex items-end pl-8 pr-9 py-8" style="background-image: url('assets/imgHome/image15.png')">
-                    <div class="description bg-white px-4 py-8 space-y-1 opacity-[0.86] invisible">
-                        <p class="text-[#616161] text-[18px] font-bold">02 <fa-icon [icon]="faLineChart" class=""></fa-icon> Bed Room </p>
-                        <h3 class="text-[28px] text-[#3A3A3A] font-semibold">Outer Peace</h3>
-                    </div>
-                    <div class="forwardArrow bg-[#B88E2F] px-4 py-2 border-1 border-solid border-[#B88E2F] invisible">
-                        <fa-icon [icon]="faArrowRight" class="text-white text-[20px] cursor-pointer"></fa-icon>
-                    </div>
+                <div class="forwardArrow bg-[#B88E2F] px-4 py-2 border-1 border-solid border-[#B88E2F] cursor-pointer">
+                    <fa-icon [icon]="faArrowRight" class="text-white text-[20px] cursor-pointer"></fa-icon>
                 </div>
-                <div class="carousel-card-3 h-[28rem] w-9 bg-cover flex items-end pl-8 pr-9 py-8" style="background-image: url('assets/imgHome/image11.png')">
-                    <div class="description bg-white px-4 py-8 space-y-1 opacity-[0.86] invisible">
-                        <p class="text-[#616161] text-[18px] font-bold">01 <fa-icon [icon]="faLineChart" class=""></fa-icon> Bed Room </p>
-                        <h3 class="text-[28px] text-[#3A3A3A] font-semibold">Inner Peace</h3>
-                    </div>
-                    <div class="forwardArrow bg-[#B88E2F] px-5 py-2 border-1 border-solid border-[#B88E2F] invisible">
-                        <fa-icon [icon]="faArrowRight" class="text-white text-[20px] cursor-pointer"></fa-icon>
-                    </div>
+            
+            </div>
+
+
+            <div class="carousel-card-2 h-[28rem] bg-cover flex items-end pl-8 pr-9 py-8
+                xs2:h-[30rem] xs2:mx-auto xs2:w-fit xs2:hidden 
+                sm1:mx-auto sm1:hidden
+                "
+                style="background-image: url('assets/imgHome/image15.png')">
+                <div class="description bg-white px-4 py-8 space-y-1 opacity-[0.86]
+                md1:invisible
+                md2:invisible
+                lg1:invisible
+                lg2:invisible">
+                    <p class="text-[#616161] text-[18px] font-bold">02 <fa-icon [icon]="faLineChart" class=""></fa-icon>
+                        Bed Room </p>
+                    <h3 class="text-[28px] text-[#3A3A3A] font-semibold">Outer Peace</h3>
+                </div>
+                <div
+                    class="forwardArrow bg-[#B88E2F] px-4 py-2 border-1 border-solid border-[#B88E2F] cursor-pointer
+                    md1:invisible
+                    md2:invisible
+                    lg1:invisible
+                    lg2:invisible">
+                    <fa-icon [icon]="faArrowRight" class="text-white text-[20px] cursor-pointer"></fa-icon>
                 </div>
             </div>
-            <div class="carousel-indicators flex justify-end gap-9 relative bottom-20 right-35"> 
-                <div class="indicator active w-7 h-7 rounded-full border-1 border-[#B88E2F] font-semibold">
-                    <fa-icon [icon]="faCircle" class="text-[#B88E2F] relative left-[5px] top-[1.5px] cursor-pointer"></fa-icon>
+
+            <div class="carousel-card-3 h-[28rem] w-9 bg-cover flex items-end pl-8 pr-9 py-8
+                xs2:h-[30rem] xs2:mx-auto xs2:w-fit xs2:hidden
+                sm1:mx-auto sm1:w-fit sm1:hidden
+                md1:w-35"
+                style="background-image: url('assets/imgHome/image11.png')">
+                <div class="description bg-white px-4 py-8 space-y-1 opacity-[0.86]
+                    md1:invisible
+                    lg1:invisible
+                    lg2:invisible">
+                    <p class="text-[#616161] text-[18px] font-bold">03 <fa-icon [icon]="faLineChart" class=""></fa-icon>
+                        Lounge </p>
+                    <h3 class="text-[28px] text-[#3A3A3A] font-semibold">Mental Peace</h3>
                 </div>
-                <div class="indicator w-7 h-7 rounded-full hover:border-1 hover:border-[#B88E2F] font-semibold">
-                    <fa-icon [icon]="faCircle" class="text-[#D8D8D8] hover:text-[#B88E2F] relative left-[5px] top-[1.5px] cursor-pointer"></fa-icon>
-                </div>
-                <div class="indicator w-7 h-7 rounded-full hover:border-1 hover:border-[#B88E2F] font-semibold">
-                    <fa-icon [icon]="faCircle" class="text-[#D8D8D8] hover:text-[#B88E2F] relative left-[5px] top-[1.5px] cursor-pointer"></fa-icon>
-                </div>
-                <div class="indicator w-7 h-7 rounded-full hover:border-1 hover:border-[#B88E2F] font-semibold">
-                    <fa-icon [icon]="faCircle" class="text-[#D8D8D8] hover:text-[#B88E2F] relative left-[5px] top-[1.5px] cursor-pointer"></fa-icon>
+                <div
+                    class="forwardArrow bg-[#B88E2F] px-5 py-2 border-1 border-solid border-[#B88E2F] cursor-pointer
+                        md1:invisible
+                        lg1:invisible
+                        lg2:invisible">
+                    <fa-icon [icon]="faArrowRight" class="text-white text-[20px] cursor-pointer"></fa-icon>
                 </div>
             </div>
-        <div class="next-btn rounded-full px-3.5 py-3.5 h-[64px] w-[64px] bg-white relative bottom-100 left-160 z-50 cursor-pointer">
-          <fa-icon [icon]="faChevronRight" class="text-[#B88E2F] text-3xl text-center py-[6px] px-[10px]"></fa-icon>
+
         </div>
+
+        <div class="carousel-indicators flex justify-end gap-9 relative bottom-20 right-35
+            xs2:bottom-[-38px] xs:right-30
+            sm1:bottom-[-38px] sm1:right-55
+            md2:bottom-[-38px] md2:right-40
+            lg1:bottom-[-38px] lg1:right-40">
+            <div class="indicator active w-7 h-7 rounded-full border-1 border-[#B88E2F] font-semibold">
+                <fa-icon [icon]="faCircle"
+                    class="text-[#B88E2F] relative left-[5px] top-[1.5px] cursor-pointer"></fa-icon>
+            </div>
+            <div class="indicator w-7 h-7 rounded-full hover:border-1 hover:border-[#B88E2F] font-semibold">
+                <fa-icon [icon]="faCircle"
+                    class="text-[#D8D8D8] hover:text-[#B88E2F] relative left-[5px] top-[1.5px] cursor-pointer"></fa-icon>
+            </div>
+            <div class="indicator w-7 h-7 rounded-full hover:border-1 hover:border-[#B88E2F] font-semibold">
+                <fa-icon [icon]="faCircle"
+                    class="text-[#D8D8D8] hover:text-[#B88E2F] relative left-[5px] top-[1.5px] cursor-pointer"></fa-icon>
+            </div>
+            <div class="indicator w-7 h-7 rounded-full hover:border-1 hover:border-[#B88E2F] font-semibold">
+                <fa-icon [icon]="faCircle"
+                    class="text-[#D8D8D8] hover:text-[#B88E2F] relative left-[5px] top-[1.5px] cursor-pointer"></fa-icon>
+            </div>
+        </div>
+
+        <div class="next-btn rounded-full px-3.5 py-3.5 h-[64px] w-[64px] bg-white relative bottom-100 left-160 z-50 cursor-pointer
+         xs2:bottom-82 xs2:left-[80%]
+         sm1:bottom-86 sm1:left-[70%]
+         md2:bottom-86 md2:left-[74%]
+         lg1:bottom-86 lg1:left-[74%]">
+            <fa-icon [icon]="faChevronRight" class="text-[#B88E2F] text-3xl text-center py-[6px] px-[10px]"></fa-icon>
+        </div>
+
     </div>
+
 </div>
 
 <div class="funiroFurniture font-poppins mb-14">
     <p class="text-[18px] text-[#616161] leading-[1.5] font-semibold text-center">Share your setup with</p>
     <h2 class="text-[#3A3A3A] text-[32px] leading-[1.2] font-semibold text-center">#FuniroFurniture</h2>
 
-    <div class="furniture flex justify-between">    
-        <div class="furniture-1 flex flex-col gap-4">
-            <div class="flex gap-4 items-end">
-                <div class="h-70 w-20 bg-cover bg-right" style="background-image: url(assets/imgHome/image12.png);"></div>
-                <div class="h-60 w-110 bg-cover bg-center" style="background-image: url(assets/imgHome/image19.png);"></div>
+    <div class="furniture flex justify-between
+    xs2:flex-col xs2:items-center xs2:gap-2 overflow-x-hidden
+    sm1:flex-col sm1:items-center sm1:gap-2 
+    md1:flex-col md1:items-center md1:gap-2 
+    md2:gap-3">    
+        <div class="furniture-1 flex flex-col gap-4
+            xs2:gap-2
+            md2:gap-2">
+            <div class="flex gap-4 items-end
+                xs2:gap-1
+                md2:gap-1">
+                <div class="h-70 w-20 bg-cover bg-right md1:w-30 md2:w-20" style="background-image: url(assets/imgHome/image12.png);"></div>
+                <div class="h-60 w-110 bg-cover bg-center md1:w-150 md2:w-90" style="background-image: url(assets/imgHome/image19.png);"></div>
             </div>
-            <div class="flex gap-4 items-start">
-                <div class="h-60 w-40 bg-cover bg-right" style="background-image: url(assets/imgHome/image14.png);"></div>
-                <div class="h-45 w-90 bg-cover bg-center" style="background-image: url(assets/imgHome/image21.png);"></div>
+            <div class="flex gap-4 items-start
+                xs2:gap-1
+                md2:gap-1">
+                <div class="h-60 w-40 bg-cover bg-right md1:w-30 md2:w-20" style="background-image: url(assets/imgHome/image14.png);"></div>
+                <div class="h-45 w-90 bg-cover bg-center md1:w-150 md2:w-90" style="background-image: url(assets/imgHome/image21.png);"></div>
             </div>
         </div>
 
         <div class="furniture-2 flex items-center">
-            <div class="h-80 w-70 bg-cover bg-center" style="background-image: url(assets/imgHome/image17.png);"></div>
+            <div style="background-image: url(assets/imgHome/image17.png);"  class="h-80 w-70 bg-cover bg-center
+             xs2:w-110
+             sm1:w-120
+             md1:w-160
+             md2-w-100" ></div>
         </div>
 
         <div class="furniture-3 flex flex-col gap-4">
             <div class="flex gap-4 items-end">
-                <div class="h-55 w-50 bg-cover bg-center" style="background-image: url(assets/imgHome/image23.png);"></div>
-                <div class="h-70 w-35 bg-cover bg-center" style="background-image: url(assets/imgHome/image24.png);"></div>
+                <div class="h-55 w-50 bg-cover bg-center sm1:w-60 md1:w-70 md2:w-40" style="background-image: url(assets/imgHome/image23.png);"></div>
+                <div class="h-70 w-35 bg-cover bg-center sm1:w-60 md1:w-70 md2:w-50" style="background-image: url(assets/imgHome/image24.png);"></div>
             </div>
             <div class="flex gap-4 items-start">
-                <div class="h-50 w-40 bg-cover bg-center" style="background-image: url(assets/imgHome/image7.png);"></div>
-                <div class="h-35 w-40 bg-cover bg-center" style="background-image: url(assets/imgHome/image2.png);"></div>
+                <div class="h-50 w-40 bg-cover bg-center sm1:w-60 md1:w-70 md2:w-20" style="background-image: url(assets/imgHome/image7.png);"></div>
+                <div class="h-35 w-40 bg-cover bg-center sm1:w-60 md1:w-70 md2:w-50" style="background-image: url(assets/imgHome/image2.png);"></div>
             </div>
         </div>
     </div>
