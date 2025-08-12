@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faUser, faSearch, faHeart, faShoppingCart, faHamburger, faHandMiddleFinger } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faSearch, faHeart, faShoppingCart, faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +15,7 @@ export class Header {
   faSearch = faSearch; 
   faHeart = faHeart;
   faShoppingCart = faShoppingCart;
-  fahamburger = faHamburger
+  faBars = faBars;
 
   constructor(private route: Router) {
 
@@ -37,17 +37,26 @@ export class Header {
     this.route.navigate(['cart-page']);
   }
 
-  showMobileMenu() {
-    const menu=document.getElementById('mobile-menu');
+  toggleMobileMenu() {
+    const menu = document.getElementById('mobilemenu');
     if (menu) {
-      menu.classList.toggle('visible');
+      menu.classList.toggle('hidden');
     }
   }
-  
-  hideMobileMenu() {
-    const menu=document.getElementById('mobile-menu');
-    if (menu) {
-      document.body.classList.toggle('invisible');
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event) {
+    const target = event.target as HTMLElement;
+    const menu = document.getElementById('mobilemenu');
+    const barsIcon = document.querySelector('.bars');
+
+    if (
+      menu &&
+      !menu.classList.contains('hidden') && // menu is open
+      !menu.contains(target) && // clicked outside menu
+      barsIcon && !barsIcon.contains(target) // clicked outside icon
+    ) {
+      menu.classList.add('hidden'); // close menu
     }
   }
 }

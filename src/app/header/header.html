@@ -1,6 +1,6 @@
 <div class="header">
 
-<header class="h-[70px] bg-white border-1">
+<header class="h-[70px] bg-white">
 
     <div class="navbar flex relative top-[7px] items-center
       lg2:justify-around lg2:px-0 lg1:justify-around lg1:px-0 
@@ -34,17 +34,20 @@
         </div>
       </div>
 
-      <div class="ham-burger md2:hidden lg1:hidden lg2:hidden">
-        <fa-icon [icon]="fahamburger" class="text-4xl text-red-600 cursor-pointer"
-          (click)="showMobileMenu()" (blur)="hideMobileMenu()" >
+      <div class="bars md2:hidden lg1:hidden lg2:hidden">
+        <fa-icon [icon]="faBars" class="text-4xl text-red-600 cursor-pointer"
+          (click)="toggleMobileMenu()">
         </fa-icon>
       </div>
     </div>
 
-    <div id="mobile-menu" class="invisible bg-gray-50 border-1 absolute h-full w-2/3 px-5 py-8 space-y-10 top-20 right-0
-         lg1:hidden lg2:hidden
-         md1:w-1/3 md2:hidden
-         sm2:w-1/2">
+    <div id="mobilemenu" class="hidden bg-white absolute h-full w-[60%] px-5 py-8 space-y-10 top-17.5 right-0 z-50
+         lg1:hidden 
+         lg2:hidden
+         md1:w-[40%] md1:px-5 md1:py-8 
+         md2:hidden
+         sm2:w-[45%] sm2:px-5 sm2:py-8
+         sm1:w-[50%] sm1:px-5 sm1:py-8">
         
         <div class="nav">
           <ul class="font-poppins text-[16px] font-medium space-y-10">
@@ -55,13 +58,13 @@
           </ul>
         </div>
 
-        <div class="icons cursor-pointer space-x-15">
+        <div class="icons cursor-pointer space-x-10">
           <fa-icon [icon]="faUser" class="cursor-pointer"></fa-icon>
           <fa-icon [icon]="faSearch" class="cursor-pointer"></fa-icon>
           <fa-icon [icon]="faHeart" class="cursor-pointer"></fa-icon>
           <fa-icon [icon]="faShoppingCart" class="cursor-pointer" (click)="redirectToCart()"></fa-icon>
         </div>
-    
     </div>
+
 </header>
 </div>
