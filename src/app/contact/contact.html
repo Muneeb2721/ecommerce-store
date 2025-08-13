@@ -7,35 +7,61 @@
             <img src="assets\imgHome\logo.png" alt="Logo" class="w-20 h-20" />
             <h2 class="text-[45px] text-[#000000]">Contact</h2>
             <p class="text-[18px] text-[#000000]">
-                <span class="font-semibold"> Home &gt; </span> Contact
+                <span class="font-semibold"><a class="cursor-pointer" (click)="redirectToHome()"> Home</a> &gt; </span> Contact
             </p>
         </div>
     </div>
 </div>
 
 <div class="font-poppins mb-12">
-    <div class="w-[50%] mx-auto mb-20 text-center">
-        <h2 class="text-[36px] font-semibold">Get In Touch With Us</h2>
-        <p class="text-[#9F9F9F]">
+
+    <div class="w-[50%] mx-auto mb-20 text-center
+    xs2:w-[70%] xs2:space-y-4
+    sm1:w-[70%] sm1:space-y-4
+    sm2:w-[60%] sm2:space-y-5
+    md1:w-full md1:space-y-5">
+        <h2 class="text-[36px] font-semibold leading
+        xs2:text-[32px]
+        md1:w-[40%] md1:mx-auto
+        md2:w-[55%] md2:mx-auto">Get In Touch With Us</h2>
+        <p class="text-[#9F9F9F]
+        md1:w-[70%] md1:mx-auto
+        md2:w-full md2:mx-auto">
             For More Information About Our Product & Services. Please Feel Free To Drop Us An
             Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!
         </p>
     </div>
 
-    <div class="flex justify-center">
+    <div class="flex justify-center
+    xs2:flex-col xs2:items-center
+    sm1:flex-col sm1:items-center">
 
-        <div class="address w-[30%]">
-            <div class="flex gap-3 items-baseline">
+        <div class="address w-[30%]
+            xs2:w-[80%] xs2:space-y-5
+            sm1:w-[75%] sm1:space-y-5
+            sm2:w-[45%] sm2:space-y-5
+            md1:w-[45%] md1:space-y-5
+            md2:w-[45%] md2:space-y-5">
+
+            <div class="flex gap-3 items-baseline
+                xs2:gap-3 xs2:justify-center
+                sm1:gap-4 sm1:justify-center">
                 <fa-icon [icon]="faAddress" class="text-[28px]"></fa-icon>
-                <div class="w-[50%] space-y-3">
+                <div class="w-[50%] space-y-3
+                xs2:w-[60%]
+                sm1:w-[60%]">
                     <h5 class="text-[20px] font-bold">Address</h5>
                     <p class="">236 5th SE Avenue, New York NY10000, United States</p>
                 </div>
             </div>
 
-            <div class="flex gap-3 items-baseline">
+            <div class="flex gap-3 items-baseline
+                xs2:gap-3 xs2:justify-center
+                sm1:gap-4 sm1:justify-center">
                 <fa-icon [icon]="faCall" class="text-[28px]"></fa-icon>
-                <div class=" space-y-3">
+                <div class=" space-y-3
+                xs2:w-[60%]
+                sm1:w-[60%]">
                     <h5 class="text-[20px] font-bold">Phone</h5>
                     <div class="">
                         <p class="">Mobile: +(84) 546-6789</p>
@@ -44,9 +70,13 @@
                 </div>
             </div>
 
-            <div class="flex gap-3 items-baseline">
+            <div class="flex gap-3 items-baseline
+                xs2:gap-3 xs2:justify-center
+                sm1:gap-4 sm1:justify-center">
                 <fa-icon [icon]="faTime" class="text-[28px]"></fa-icon>
-                <div class=" space-y-3">
+                <div class=" space-y-3
+                xs2:w-[60%]
+                sm1:w-[60%]">
                     <h5 class="text-[20px] font-bold">Working Time</h5>
                     <div class="">
                         <p class="">Monday-Friday: 9:00 - 22:00</p>
@@ -57,8 +87,16 @@
 
         </div>
 
-        <div class="form w-[30%]">
-            <form class="space-y-8">
+        <div class="form w-[30%]
+        xs2:w-[60%] xs2:mt-8
+        sm1:w-[50%] sm1:mt-8
+        sm2:w-[40%]
+        md1:w-[40%]
+        md2:w-[40%]">
+
+            <form class="space-y-8
+            ">
+
                 <div class="input-1 flex flex-col space-y-3">
                     <label for="name" class="font-bold">Your name</label>
                     <input type="text" name="name" placeholder="Abc" class="text-[#9F9F9F]
@@ -85,51 +123,13 @@
                         Submit
                     </button>
                 </div>
+
             </form>
+
         </div>
 
-    </div>
-</div>
-
-<div class="frame flex justify-evenly items-baseline bg-[#FAF3EA] py-25">
-    <div class="flex items-center gap-4">
-        <div class="frame-image ">
-            <fa-icon [icon]="faTrophy" class="mr-0.5 text-5xl"></fa-icon>
-        </div>
-        <div class="flex flex-col">
-            <h4 class="text-[#242424] text-[25px] font-semibold">High Quality</h4>
-            <p class="text-[#898989] text-20px font-semibold">crafted from top materials</p>
-        </div>
-    </div>
-
-    <div class="flex items-center gap-4">
-        <div class="frame-image ">
-            <fa-icon [icon]="faShield" class="mr-0.5 text-5xl"></fa-icon>
-        </div>
-        <div class="flex flex-col">
-            <h4 class="text-[#242424] text-[25px] font-semibold">Warranty Protection</h4>
-            <p class="text-[#898989] text-20px font-semibold">Over 2 years</p>
-        </div>
-    </div>
-
-    <div class="flex items-center gap-4">
-        <div class="frame-image ">
-            <fa-icon [icon]="faTruck" class="mr-0.5 text-5xl"></fa-icon>
-        </div>
-        <div class="flex flex-col">
-            <h4 class="text-[#242424] text-[25px] font-semibold">Free Shipping</h4>
-            <p class="text-[#898989] text-20px font-semibold">Order over 150 $</p>
-        </div>
-    </div>
-
-    <div class="flex items-center gap-4">
-        <div class="frame-image ">
-            <fa-icon [icon]="faHeadset" class="mr-0.5 text-5xl"></fa-icon>
-        </div>
-        <div class="flex flex-col">
-            <h4 class="text-[#242424] text-[25px] font-semibold">24 / 7 Support</h4>
-            <p class="text-[#898989] text-20px font-semibold">Dedicated support</p>
-        </div>
     </div>
 
 </div>
+
+<app-frame></app-frame>
