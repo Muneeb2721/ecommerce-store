@@ -7,7 +7,7 @@
             <img src="assets\imgHome\logo.png" alt="Logo" class="w-20 h-20" />
             <h2 class="text-[45px] text-[#000000]">Checkout</h2>
             <p class="text-[18px] text-[#000000]">
-                <span class="font-semibold"> Home &gt; </span> Checkout
+                <span class="font-semibold"><a class="cursor-pointer" (click)="redirectToHome()"> Home</a> &gt; </span>  Checkout
             </p>
         </div>
     </div>
@@ -15,8 +15,18 @@
 
 <div class="checkout-details font-poppins mb-12">
     <div class="checkout-form space-y-6">
-        <h2 class="text-[36px] text-black font-semibold px-32">Billing details</h2>
-        <div class="flex justify-center px-32 gap-32">
+        <h2 class="text-[36px] text-black font-semibold px-32
+        xs2:text-[30px] xs2:text-center
+        sm1:text-[30px] sm1:text-center
+        sm2:text-[30px] sm2:text-center
+        md1:text-[30px] md1:text-center
+        md2:text-[30px] md2:text-center">Billing details</h2>
+        <div class="flex justify-center px-32 gap-32
+        xs2:flex-col xs2:px-0 xs2:items-center
+        sm1:flex-col sm1:px-0 sm1:items-center
+        sm2:flex-col sm2:px-0 sm2:items-center
+        md1:flex-col md1:px-0 md1:items-center
+        md2:flex-col md2:px-0 md2:items-center">
             <form class="space-y-10 w-fit">
 
                 <div class="name flex space-y-3 gap-5">
@@ -88,8 +98,15 @@
                 </div>
             </form>
 
-            <div class="placeOrder w-fit">
-                <div class="flex items-baseline gap-30 mb-9 w-fit">
+            <div class="placeOrder w-fit
+            xs2:flex xs2:flex-col xs2:items-center xs2:px-10
+            sm1:flex sm1:flex-col sm1:items-center sm1:px-10
+            sm2:flex sm2:flex-col sm2:items-center sm2:px-15
+            md1:flex md1:flex-col md1:items-center md1:px-30
+            md2:flex md2:flex-col md2:items-center md2:px-30">
+
+                <div class="flex items-baseline gap-30 mb-9 w-fit
+                ">
                     <div class="product space-y-3">
                         <h4 class="text-[24px] text-black font-bold">Product</h4>
                         <p class="text-[#9F9F9F]text-[16px]">Asgaard sofa X <span class="text-black">1</span></p>
@@ -100,13 +117,20 @@
                         <h4 class="text-[24px] text-black font-bold">Subtotal</h4>
                         <p class="">Rs. 250,000.00</p>
                         <p class="">Rs. 250,000.00</p>
-                        <p class="text-[#B88E2F] text-[24px] font-bold">Rs. 250,000.00</p>
+                        <p class="text-[#B88E2F] text-[24px] font-bold
+                        xs2:text-[20px]">Rs. 250,000.00</p>
                     </div>
                 </div>
 
-                <div class="hr border-1 border-[#D9D9D9] mb-12"></div>
+                <div class="hr border-1 border-[#D9D9D9] mb-12
+                xs2:w-full
+                sm1:w-full
+                sm2:w-full
+                md1:w-full
+                md2:w-full"></div>
                 
-                <div class="w-fit space-y-5">
+                <div class="w-fit space-y-5
+                ">
                     <div class="checkbox1 space-y-5">
                         <input type="radio" name="" id="">   <label for=""  class="pl-4">Direct Bank Transfer</label>
                         <p class="text-[#9F9F9F]">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
@@ -131,44 +155,6 @@
             </div>
         </div>
     </div>
-    <div class="checkout-total"></div>
 </div>
 
-<div class="frame flex justify-evenly items-baseline bg-[#FAF3EA] py-25">
-    <div class="flex items-center gap-4">
-        <div class="frame-image ">
-            <fa-icon [icon]="faTrophy" class="mr-0.5 text-5xl"></fa-icon>
-        </div>
-        <div class="flex flex-col">
-            <h4 class="text-[#242424] text-[25px] font-semibold">High Quality</h4>
-            <p class="text-[#898989] text-20px font-semibold">crafted from top materials</p>
-        </div>
-    </div>
-    <div class="flex items-center gap-4">
-        <div class="frame-image ">
-            <fa-icon [icon]="faShield" class="mr-0.5 text-5xl"></fa-icon>
-        </div>
-        <div class="flex flex-col">
-            <h4 class="text-[#242424] text-[25px] font-semibold">Warranty Protection</h4>
-            <p class="text-[#898989] text-20px font-semibold">Over 2 years</p>
-        </div>
-    </div>
-    <div class="flex items-center gap-4">
-        <div class="frame-image ">
-            <fa-icon [icon]="faTruck" class="mr-0.5 text-5xl"></fa-icon>
-        </div>
-        <div class="flex flex-col">
-            <h4 class="text-[#242424] text-[25px] font-semibold">Free Shipping</h4>
-            <p class="text-[#898989] text-20px font-semibold">Order over 150 $</p>
-        </div>
-    </div>
-    <div class="flex items-center gap-4">
-        <div class="frame-image ">
-            <fa-icon [icon]="faHeadset" class="mr-0.5 text-5xl"></fa-icon>
-        </div>
-        <div class="flex flex-col">
-            <h4 class="text-[#242424] text-[25px] font-semibold">24 / 7 Support</h4>
-            <p class="text-[#898989] text-20px font-semibold">Dedicated support</p>
-        </div>
-    </div>
-</div>
+<app-frame></app-frame>
