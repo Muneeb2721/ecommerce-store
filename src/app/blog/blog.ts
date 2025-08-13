@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHeadset, faSearch, faShieldAlt, faTrash, faTrophy, faTruck } from '@fortawesome/free-solid-svg-icons';
+import { Frame } from '../frame/frame';
 
 @Component({
   selector: 'app-blog',
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, Frame],
   templateUrl: './blog.html',
   styleUrl: './blog.css'
 })
@@ -34,5 +35,9 @@ export class Blog {
     if (searchIcon) {
       searchIcon.classList.remove('invisible');
     }
+  }
+
+  redirectToHome() {
+    this.route.navigate(['home-page'])
   }
 }
