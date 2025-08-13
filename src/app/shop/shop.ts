@@ -4,10 +4,11 @@ import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faFilter, faGridHorizontal, faHeadset, faList, faShieldAlt, faTrophy, faTruck } from '@fortawesome/free-solid-svg-icons';
 import { faShare, faHeart, faCodeCompare, faArrowRight, faArrowLeft, faMinus, faCircle, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { Frame } from '../frame/frame';
 
 @Component({
   selector: 'app-shop',
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, Frame],
   templateUrl: './shop.html',
   styleUrl: './shop.css'
 })
@@ -49,7 +50,7 @@ export class Shop {
   }
 
   show() {
-    this.route.navigate(['header-page']);
+    this.route.navigate(['cart-page']);
   }
 
   productDetail() {
@@ -58,5 +59,13 @@ export class Shop {
 
   redirectToComparison() {
     this.route.navigate(['product-comparison-page']);
+  }
+
+  redirectToHome() {
+    this.route.navigate(['home-page']);
+  }
+
+  redirectToShop() {
+    this.route.navigate(['shop-page']);
   }
 }
