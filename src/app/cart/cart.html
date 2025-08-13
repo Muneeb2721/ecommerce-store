@@ -7,35 +7,102 @@
             <img src="assets\imgHome\logo.png" alt="Logo" class="w-24 h-24" />
             <h2 class="text-[45px] text-[#000000]">Cart</h2>
             <p class="text-[18px] text-[#000000]">
-                <span class="font-semibold"> Home &gt; </span> Cart
+                <span class="font-semibold"><a class="cursor-pointer" (click)="redirectToHome()"> Home</a> &gt; </span>  Cart
             </p>
         </div>
     </div>
 </div>
 
-<div class="cart font-poppins flex justify-center gap-5 mb-8">
-    <div class="items-wrapper space-y-7">
-        <div class="items-head bg-[#F9F1E7] flex items-center gap-24 py-1.5 relative pl-45">
+<div class="cart font-poppins flex justify-center gap-5 mb-8 overflow-x-hidden
+xs2:flex-col
+sm1:flex-col
+sm2:flex-col
+md1:flex-col
+md2:flex-col
+lg1:px-2">
+    
+    <div class="items-wrapper space-y-7
+    xs2:mb-50
+    sm1:mb-50
+    sm2:mb-12
+    md1:mb-12
+    md2:mb-10">
+        
+        <div class="items-head bg-[#F9F1E7] flex items-center gap-24 py-1.5 relative pl-45
+
+        xs2:pl-1 xs2:gap-[12%]
+        sm1:pl-6 sm1:gap-[16%]
+        sm2:pl-52 sm2:gap-[12%]
+        md1:pl-52 md1:gap-[12%]
+        md2:pl-52 md2:gap-[16%]
+        lg1:pl-52 lg1:gap-[12%]">
             <p class="font-bold text-[16px]">Product</p>
             <p class="font-bold text-[16px]">Price</p>
             <p class="font-bold text-[16px]">Quantity</p>
-            <p class="font-bold text-[16px] relative right-11">Subtotal</p>
+            <p class="font-bold text-[16px] relative right-11
+            xs2:right-0
+            sm1:right-5
+            sm2:right-0
+            md1:right-0
+            md2:right-0
+            lg1:right-3">Subtotal</p>
         </div>
 
-        <div class="items-name flex items-center gap-12 py-1.5">
-            <p class="img px-4 py-4 bg-[#F9F1E7] rounded-[8px]">
-                <img src="assets/imgSingleProduct/asgaad-sofa.png"  alt="" class="w-24 h-24">
+        <div class="items-name flex items-center gap-12 py-1.5
+        xs2:flex-wrap xs2:pl-1 xs2:gap-12
+        sm1:flex-wrap sm1:pl-3 sm1:gap-12 sm1:w-fit
+        sm2:flex-wrap sm2:pl-3 sm2:gap-14
+        md1:pl-3 md1:gap-12
+        md2:pl-3 md2:gap-14
+        lg1:pl-3 lg1:gap-12">
+            <p class="img px-4 py-4 bg-[#F9F1E7] rounded-[8px] 
+            xs2:absolute xs2:top-150
+            sm1:absolute sm1:top-150">
+                <img src="assets/imgSingleProduct/asgaad-sofa.png" 
+                class="w-24 h-24">
             </p>
-            <p class="text-[16px] text-[#9F9F9F]">Asgaard Sofa</p>
-            <p class="text-[16px] text-[#9F9F9F]">Rs. 250,000.00</p>
-            <p class="font-bold text-[16px] border-1 border-[#9F9F9F] rounded-[8px] px-4 py-2">1</p>
-            <p class="font-bold text-[16px]">Rs. 250,000.00</p>
-            <fa-icon [icon]="faDelete" class="text-red-700 cursor-pointer"></fa-icon>
+            <p class="text-[16px] text-[#9F9F9F] 
+            xs2:w-[10%] xs2:text-center
+            sm1:text-center
+            sm2:text-center sm2:w-[10%]
+            md1:text-center md1:w-[10%]
+            lg1:text-center ">Asgaard Sofa</p>
+            <p class="text-[16px] text-[#9F9F9F] 
+            xs2:w-[20%] xs2:text-center
+            sm1:text-center
+            sm2:text-center sm2:w-[10%]
+            md1:text-center md1:w-[10%]
+            lg1:text-center">Rs. 250,000.00</p>
+            <p class="font-bold text-[16px] border-1 border-[#9F9F9F] rounded-[8px] px-4 py-2
+            xs2:px-3 xs2:py-1
+            sm1:px-3 sm1:py-1 sm1:relative sm1:left-5
+            md1:relative md1:left-7
+            md2:relative md2:left-14">1</p>
+            <p class="font-bold text-[16px] 
+            xs2:w-[20%] xs2:text-center
+            sm1:text-center sm1:relative sm1:left-12
+            sm2:text-center sm2:w-[10%] sm2:relative sm2:left-9
+            md1:relative md1:left-13
+            md2:relative md2:left-29
+            lg1:text-center">Rs. 250,000.00</p>
+            <fa-icon [icon]="faDelete" class="text-red-700 cursor-pointer 
+            sm1:relative sm1:left-8
+            sm2:relative sm2:left-8
+            md1:relative md1:left-14
+            md2:relative md2:left-30"></fa-icon>
         </div>
+
     </div>
 
-    <div class="checkout bg-[#F9F1E7] flex flex-col gap-10 pt-3 pb-25 px-20 rounded-[2px]">
-        <h2 class="text-[32px] text-black font-semibold">Cart Totals</h2>
+    <div class="checkout bg-[#F9F1E7] flex flex-col gap-10 pt-3 pb-25 px-20 rounded-[8px]
+    xs2:w-fit xs2:mx-auto 
+    sm1:w-fit sm1:mx-auto 
+    sm2:w-fit sm2:mx-auto 
+    md1:w-fit md1:mx-auto 
+    lg1:w-fit lg1:px-4
+    ">
+        <h2 class="text-[32px] text-black font-semibold
+        md2:text-center">Cart Totals</h2>
         <div class="prices flex flex-col items-center gap-6 relative top-8">
             <div class="flex gap-7"><p class="">Subtotal</p> <span class="text-[#9F9F9F] text-[16px]">Rs. 250,000.00</span></div>
             <div class="flex gap-7"><p class="">Total</p> <span class="text-[#B88E2F] text-[16px]">Rs. 250,000.00</span></div>
@@ -45,41 +112,4 @@
     
 </div>
 
-<div class="frame flex justify-evenly items-baseline bg-[#FAF3EA] py-25">
-    <div class="flex items-center gap-4">
-        <div class="frame-image ">
-            <fa-icon [icon]="faTrophy" class="mr-0.5 text-5xl"></fa-icon>
-        </div>
-        <div class="flex flex-col">
-            <h4 class="text-[#242424] text-[25px] font-semibold">High Quality</h4>
-            <p class="text-[#898989] text-20px font-semibold">crafted from top materials</p>
-        </div>
-    </div>
-    <div class="flex items-center gap-4">
-        <div class="frame-image ">
-            <fa-icon [icon]="faShield" class="mr-0.5 text-5xl"></fa-icon>
-        </div>
-        <div class="flex flex-col">
-            <h4 class="text-[#242424] text-[25px] font-semibold">Warranty Protection</h4>
-            <p class="text-[#898989] text-20px font-semibold">Over 2 years</p>
-        </div>
-    </div>
-    <div class="flex items-center gap-4">
-        <div class="frame-image ">
-            <fa-icon [icon]="faTruck" class="mr-0.5 text-5xl"></fa-icon>
-        </div>
-        <div class="flex flex-col">
-            <h4 class="text-[#242424] text-[25px] font-semibold">Free Shipping</h4>
-            <p class="text-[#898989] text-20px font-semibold">Order over 150 $</p>
-        </div>
-    </div>
-    <div class="flex items-center gap-4">
-        <div class="frame-image ">
-            <fa-icon [icon]="faHeadset" class="mr-0.5 text-5xl"></fa-icon>
-        </div>
-        <div class="flex flex-col">
-            <h4 class="text-[#242424] text-[25px] font-semibold">24 / 7 Support</h4>
-            <p class="text-[#898989] text-20px font-semibold">Dedicated support</p>
-        </div>
-    </div>
-</div>
+<app-frame></app-frame>
