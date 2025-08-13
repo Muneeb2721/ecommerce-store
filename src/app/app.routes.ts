@@ -9,6 +9,7 @@ import { Cart } from './cart/cart';
 import { Checkout } from './checkout/checkout';
 import { Contact } from './contact/contact';
 import { Blog } from './blog/blog';
+import { Frame } from './frame/frame';
 
 export const routes: Routes = [
     
@@ -16,10 +17,6 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'home-page',
     pathMatch: 'full' // ✅ Important
-  },
-    {
-        path: 'header-page',
-        component: Header
     }
     ,
     {
