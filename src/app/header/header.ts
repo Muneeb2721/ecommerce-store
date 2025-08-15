@@ -2,10 +2,11 @@ import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faUser, faSearch, faHeart, faShoppingCart, faBars } from '@fortawesome/free-solid-svg-icons';
+import { CartSidebar } from '../cart-sidebar/cart-sidebar';
 
 @Component({
   selector: 'app-header',
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, CartSidebar],
   templateUrl: './header.html',
   styleUrl: './header.css'
 })
@@ -33,8 +34,11 @@ export class Header {
     this.route.navigate(['contact-page']);
   }
 
-  redirectToCart() {
-    this.route.navigate(['cart-page']);
+  redirectToCartSideBar() {
+    const sidebar = document.getElementById('sidebar')
+    if(sidebar){
+      sidebar.classList.toggle('hidden');
+    }
   }
 
   toggleMobileMenu() {

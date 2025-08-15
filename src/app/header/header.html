@@ -26,11 +26,12 @@
           </ul>
         </div>
 
-        <div class="icons flex cursor-pointer gap-10">
-          <fa-icon [icon]="faUser" class=""></fa-icon>
-          <fa-icon [icon]="faSearch" class=""></fa-icon>
-          <fa-icon [icon]="faHeart" class=""></fa-icon>
-          <fa-icon [icon]="faShoppingCart" class="" (click)="redirectToCart()"></fa-icon>
+        <div class="icons flex gap-10">
+          <fa-icon [icon]="faUser" class=" cursor-pointer "></fa-icon>
+          <fa-icon [icon]="faSearch" class=" cursor-pointer "></fa-icon>
+          <fa-icon [icon]="faHeart" class=" cursor-pointer "></fa-icon>
+          <fa-icon [icon]="faShoppingCart" class=" cursor-pointer " (click)="redirectToCartSideBar()"></fa-icon>
+          <p id="sidebar" class="hidden cart-sidebar absolute z-50 right-0 top-0"><app-cart-sidebar></app-cart-sidebar></p>
         </div>
       </div>
 
@@ -62,7 +63,7 @@
           <fa-icon [icon]="faUser" class="cursor-pointer"></fa-icon>
           <fa-icon [icon]="faSearch" class="cursor-pointer"></fa-icon>
           <fa-icon [icon]="faHeart" class="cursor-pointer"></fa-icon>
-          <fa-icon [icon]="faShoppingCart" class="cursor-pointer" (click)="redirectToCart()"></fa-icon>
+          <fa-icon [icon]="faShoppingCart" class="cursor-pointer" (click)="redirectToCartSideBar()"></fa-icon>
         </div>
     </div>
 
