@@ -10,6 +10,7 @@ import { Checkout } from './checkout/checkout';
 import { Contact } from './contact/contact';
 import { Blog } from './blog/blog';
 import { Frame } from './frame/frame';
+import { CartSidebar } from './cart-sidebar/cart-sidebar';
 
 export const routes: Routes = [
     
