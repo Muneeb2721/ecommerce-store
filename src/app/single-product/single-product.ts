@@ -43,10 +43,22 @@ export class SingleProduct {
   }
 
   show() {
-    this.route.navigate(['header-page']);
+    this.route.navigate(['cart-page']);
   }
 
   productDetail() {
     this.route.navigate(['single-product-page']);
+  }
+
+  redirectToHome() {
+    this.route.navigate(['home-page']);
+  }
+
+  redirectToShop() {
+    this.route.navigate(['shop-page']);
+  }
+
+  redirectToComparison() {
+    this.route.navigate(['product-comparison-page']);
   }
 }
