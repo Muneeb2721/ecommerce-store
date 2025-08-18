@@ -31,7 +31,7 @@ export class Home {
       this.showOverlays = this.showOverlays.map((_, i) => i === idx);
     }
   
-    // Hide all overlays when clicking outside
+    // Hideall overlays when clicking outside
     @HostListener('document:click', ['$event'])
     onDocumentClick(event: Event) {
       this.showOverlays = this.showOverlays.map(() => false);

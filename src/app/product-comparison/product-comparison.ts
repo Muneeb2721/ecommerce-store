@@ -4,6 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faChevronDown, faGridHorizontal, faHeadset, faList, faShieldAlt, faStar, faStarHalf, faTrophy, faTruck } from '@fortawesome/free-solid-svg-icons';
 import { faShare, faHeart, faCodeCompare, faArrowRight, faArrowLeft, faMinus, faCircle, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Frame } from '../frame/frame';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -31,4 +32,11 @@ export class ProductComparison {
     faHeadset = faHeadset;
     faStar = faStar
     faStarHalf = faStarHalf
+
+    constructor(private route: Router){ 
+    }
+
+    redirectToHome() {
+      this.route.navigate(['home-page']);
+    }
 }

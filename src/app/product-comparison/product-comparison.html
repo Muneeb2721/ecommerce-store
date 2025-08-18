@@ -1,22 +1,39 @@
 <div class="shop font-poppins mb-12">
-    <div class="shop-banner relative flex flex-col gap-8 h-80 bg-cover bg-center justify-center items-center"
+    <div class="shop-banner relative flex flex-col h-70 bg-cover bg-center justify-center items-center"
         style="background-image: url('assets/imgHome/image25.jpg')">
+        <!-- Overlay -->
         <div class="absolute inset-0 bg-white opacity-50 z-10"></div>
-
-        <div class="relative z-20 flex flex-col gap-8 items-center h-full w-full mt-8">
-            <img src="assets\imgHome\logo.png" alt="Logo" class="w-24 h-24" />
-            <h2 class="text-[45px] text-[#000000]">Product Comparison</h2>
+        <!-- Text Content -->
+        <div class="relative z-20 flex flex-col items-center justify-center h-full w-full text-center 
+        leading-[50px] 
+        xs2:space-y-3
+        sm1:space-y-3">
+            <h2 class="text-[48px] text-[#000000]
+            xs2:text-[36px]
+            sm1:text-[36px]">Product Comparison</h2>
             <p class="text-[18px] text-[#000000]">
-                <span class="font-semibold"> Home &gt; </span> Comparison
+                <span class="font-semibold"><a class="cursor-pointer" (click)="redirectToHome()"> Home</a> &gt; </span>Product Comparison
             </p>
         </div>
     </div>
 </div>
 
-<div class="product-comparison flex gap-8">
+<div class="product-comparison flex gap-8 justify-around mb-10
+xs2:flex-col-reverse xs2:items-center
+sm1:flex-col-reverse sm1:items-center
+sm2:flex-wrap sm2:gap-10
+md1:flex-wrap md1:gap-10">
 
-    <div class="w-[15%]">
-        <h2 class="text-[28px] text-[black] w-fit leading-[35px]">Go to Product page for more Products</h2>
+    <div class="w-[15%]
+    xs2:w-[70%] xs2:text-center xs2:space-y-3
+    sm1:w-[70%] sm1:text-center sm1:space-y-3
+    sm2:w-[70%] sm2:text-center sm2:space-y-3
+    md1:w-[70%] md1:text-center md1:space-y-3">
+        <h2 class="text-[28px] text-[black] w-fit leading-[35px]
+        xs2:text-[20px] xs2:font-bold xs2:text-center xs2:w-full
+        sm1:text-[24px] sm1:font-bold sm1:text-center sm1:w-full
+        sm2:text-[26px] sm2:font-bold sm2:text-center sm2:w-full
+        md1:text-[26px] md1:font-bold md1:text-center md1:w-full">Go to Product page for more Products</h2>
         <a class="text-[20px] text-[#727272] border-b-2 border-b-[#727272] cursor-pointer w-fit">View More</a>
     </div>
     
@@ -64,7 +81,7 @@
     </div>
 
     <div class="product-dropdown">
-        <h2 class="text-[24px] text-[#000000] font-bold mb-2">Add A Product</h2>
+        <h2 class="text-[24px] text-[#000000] font-bold mb-2 text-center">Add A Product</h2>
         <select
             class="bg-[#B88E2F] rounded-[8px] text-[#FFFFFF] font-semibold px-5 py-2 focus:outline-none focus:ring-2 focus:ring-[#B88E2F] w-full">
             <option value="" disabled selected>Select a product</option>
@@ -77,11 +94,11 @@
 
 </div>
 
-<div class="product-comparison-details border-t-1 border-t-[#E8E8E8] flex items-baseline mb-50">
+<div class="product-comparison-details border-t-1 border-t-[#E8E8E8] flex mb-8">
     
-    <div class="first-col flex flex-col gap-8 flex-2">
+    <div class="first-col flex flex-col border-r-1 border-[#E8E8E8] gap-8">
 
-        <div class="general w-fit pl-10 space-y-3">
+        <div class="general space-y-2">
             <h5 class="text-[#000000] text-[28px]">General</h5>
             <p class="text-[16px]">Sales Package</p>
             <p class="text-[16px]">Model Number</p>
@@ -90,7 +107,7 @@
             <p class="text-[16px]">Upholstery Material</p>
             <p class="text-[16px]">Upholstery Color</p>
         </div>
-        <div class="product w-fit pl-10 space-y-3">
+        <div class="product space-y-2">
             <h5 class="text-[#000000] text-[28px]">Product</h5>
             <p class="text-[16px]">Filling Material</p>
             <p class="text-[16px]">Finish Type</p>
@@ -98,7 +115,7 @@
             <p class="text-[16px]">Maximum Load Capacity</p>
             <p class="text-[16px]">Origin of Manufacture</p>
         </div>
-        <div class="dimensions w-fit pl-10 space-y-3">
+        <div class="dimensions space-y-2">
             <h5 class="text-[#000000] text-[28px]">Dimensions</h5>
             <p class="text-[16px]">Width</p>
             <p class="text-[16px]">Height</p>
@@ -107,19 +124,20 @@
             <p class="text-[16px]">Seat Height</p>
             <p class="text-[16px]">Leg Height</p>
         </div>
-        <div class="warranty w-fit pl-10">
-            <h5 class="pb-10 text-[#000000] text-[28px]">Warranty</h5>
-            <p class="pb-7 text-[16px]">Warranty Summary</p>
-            <p class="pb-17 text-[16px]">Warranty Service Type</p>
-            <p class="pb-13 text-[16px]">Covered in Warranty</p>
-            <p class="pb-29 text-[16px]">Not Covered in Warranty</p>
+        <div class="warranty flex flex-col">
+            <h5 class="text-[#000000] text-[28px]">Warranty</h5>
+            <p class="text-[16px]">Warranty Summary</p>
+            <p class="text-[16px]">Warranty Service Type</p>
+            <p class="text-[16px]">Covered in Warranty</p>
+            <p class="text-[16px]">Not Covered in Warranty</p>
             <p class="text-[16px]">Domestic Warranty</p>
         </div>    
     </div>
-    <div class="hr h-[92rem] w-[1px] bg-[#E8E8E8] absolute left-[270px]"></div>
-    <div class="second-col flex flex-col gap-8 flex-2">
+    
+    <div class="second-col flex flex-col gap border-r-1 border-[#E8E8E8] gap-8">
 
-        <div class="second-col-general space-y-3 relative top-10">
+        <div class="second-col-general space-y-2">
+            <h5 class="invisible text-[#000000] text-[28px]">General</h5>
             <p class="text-[16px]">1 sectional sofa</p>
             <p class="text-[16px]">TFCBLIGRBL6SRHS</p>
             <p class="text-[16px]">Solid Wood</p>
@@ -127,14 +145,16 @@
             <p class="text-[16px]">Fabric + Cotton</p>
             <p class="text-[16px]">Bright Grey & Lion</p>
         </div>
-        <div class="second-col-product space-y-3 relative top-23">
+        <div class="second-col-product space-y-2">
+            <h5 class="invisible text-[#000000] text-[28px]">Product</h5>
             <p class="text-[16px]">Foam</p>
             <p class="text-[16px]">Bright Grey & Lion</p>
             <p class="text-[16px]">No</p>
             <p class="text-[16px]">280 KG</p>
             <p class="text-[16px]">India</p>
         </div>
-        <div class="second-col-dimensions space-y-3 relative top-37">
+        <div class="second-col-dimensions space-y-2">
+            <h5 class="invisible text-[#000000] text-[28px]">Dimensions</h5>
             <p class="text-[16px]">265.32 cm</p>
             <p class="text-[16px]">76 cm</p>
             <p class="text-[16px]">167.76 cm</p>
@@ -142,19 +162,21 @@
             <p class="text-[16px]">41.52 cm</p>
             <p class="text-[16px]">5.46 cm</p>
         </div>
-        <div class="second-col-warranty relative top-57.5">
-            <p class="pb-6 text-[16px]">1 Year Manufacturing Warranty</p>
-            <p class="pb-6 text-[16px]">For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com</p>
-            <p class="pb-7 text-[16px] pr-4">Warranty Against Manufacturing Defect</p>
-            <p class="pb-6 text-[16px] pr-4">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</p>
-            <p class="pb-6 text-[16px]">1 Year</p>
-            <a class="bg-[#B88E2F] text-[#FFFFFF] text-[20px] rounded-[3px] px-5 py-3">Add to Cart</a>
+        <div class="second-col-warranty flex flex-col gap-14">
+            <h5 class="invisible text-[#000000] text-[28px]">Warranty</h5>
+            <p class="text-[16px]">1 Year Manufacturing Warranty</p>
+            <p class="text-[16px]">For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com</p>
+            <p class="text-[16px]">Warranty Against Manufacturing Defect</p> 
+            <p class="text-[16px]">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</p>
+            <p class="text-[16px]">1 Year</p>
+            <a class="bg-[#B88E2F] text-[#FFFFFF] text-[20px] rounded-[3px] px-4 py-3 w-fit cursor-pointer">Add to Cart</a>
         </div>    
     </div>
-    <div class="hr h-[92rem] w-[1px] bg-[#E8E8E8] absolute left-[650px]"></div>
-    <div class="third-col flex flex-col gap-8 flex-2">
+    
+    <div class="third-col flex flex-col gap border-r-1 border-[#E8E8E8] gap-8">
 
-        <div class="third-col-general w-fit pl-10 space-y-3 relative top-10">
+        <div class="third-col-general space-y-2">
+            <h5 class="invisible text-[#000000] text-[28px]">General</h5>
             <p class="text-[16px]">1 Three Seater, 2 Single Seater</p>
             <p class="text-[16px]">DTUBLIGRBL568</p>
             <p class="text-[16px]">Solid Wood</p>
@@ -162,14 +184,16 @@
             <p class="text-[16px]">Fabric + Cotton</p>
             <p class="text-[16px]">Bright Grey & Lion</p>
         </div>
-        <div class="third-col-product w-fit pl-10 space-y-3 relative top-23">
+        <div class="third-col-product space-y-2">
+            <h5 class="invisible text-[#000000] text-[28px]">Product</h5>
             <p class="text-[16px]">Matte</p>
             <p class="text-[16px]">Bright Grey & Lion</p>
             <p class="text-[16px]">Yes</p>
             <p class="text-[16px]">300 KG</p>
             <p class="text-[16px]">India</p>
         </div>
-        <div class="third-col-dimensions w-fit pl-10 space-y-3 relative top-37">
+        <div class="third-col-dimensions space-y-2">
+            <h5 class="invisible text-[#000000] text-[28px]">Dimensions</h5>
             <p class="text-[16px]">265.32 cm</p>
             <p class="text-[16px]">76 cm</p>
             <p class="text-[16px]">167.76 cm</p>
@@ -177,20 +201,136 @@
             <p class="text-[16px]">41.52 cm</p>
             <p class="text-[16px]">5.46 cm</p>
         </div>
-        <div class="third-col-warranty w-fit pl-10 relative top-57.5">
-            <p class="pb-6 text-[16px]">1.2 Year Manufacturing Warranty</p>
-            <p class="pb-6 text-[16px]">For Warranty Claims or Any Product Related Issues Please Email at support@xyz.com</p>
-            <p class="pb-6 text-[16px]">Warranty of the product is limited to manufacturing defects only.</p>
-            <p class="pb-7 text-[16px]">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</p>
-            <p class="pb-6 text-[16px]">3 Months</p>
-            <a class="bg-[#B88E2F] text-[#FFFFFF] text-[20px] rounded-[3px] px-5 py-3">Add to Cart</a>
+        <div class="third-col-warranty flex flex-col gap-14">
+            <h5 class="invisible text-[#000000] text-[28px]">Warranty</h5>
+            <p class="text-[16px]">1.2 Year Manufacturing Warranty</p>
+            <p class="text-[16px]">For Warranty Claims or Any Product Related Issues Please Email at support@xyz.com</p>
+            <p class="text-[16px]">Warranty of the product is limited to manufacturing defects only.</p>
+            <p class="text-[16px]">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</p>
+            <p class="text-[16px]">3 Months</p>
+            <a class="bg-[#B88E2F] text-[#FFFFFF] text-[20px] rounded-[3px] px-4 py-3 w-fit cursor-pointer">Add to Cart</a>
         </div>    
     </div>
-    <div class="hr h-[92rem] w-[1px] bg-[#E8E8E8] absolute left-[1000px]"></div>
 
-    <div class="fourth-col flex flex-col gap-8 flex-2">
+</div>
+
+<div class="product-comparison-details flex flex-col items-center border-t-1 border-[#E8E8E8] mb-8
+ gap-8">
+    
+    <div class="General-row flex w-full">
+        <div class="general space-y-2 w-[215px] px-4 border-r-1">
+            <h5 class="text-[#000000] text-[28px] w-[143.83px]">General</h5>
+            <p class="text-[16px]">Sales Package</p>
+            <p class="text-[16px]">Model Number</p>
+            <p class="text-[16px]">Secondary Material</p>
+            <p class="text-[16px]">Configuration</p>
+            <p class="text-[16px]">Upholstery Material</p>
+            <p class="text-[16px]">Upholstery Color</p>
+        </div>
+        <div class="second-col-general w-[450px] px-4 space-y-2 border-r-1">
+            <h5 class="text-[#000000] text-[28px] w-[143.83px] invisible">General</h5>
+            <p class="text-[16px]">1 sectional sofa</p>
+            <p class="text-[16px]">TFCBLIGRBL6SRHS</p>
+            <p class="text-[16px]">Solid Wood</p>
+            <p class="text-[16px]">L-shaped</p>
+            <p class="text-[16px]">Fabric + Cotton</p>
+            <p class="text-[16px]">Bright Grey & Lion</p>
+        </div>
+         <div class="third-col-general w-[450px] px-4 space-y-2">
+            <h5 class="text-[#000000] text-[28px] w-[143.83px] invisible">General</h5>
+            <p class="text-[16px]">1 Three Seater, 2 Single Seater</p>
+            <p class="text-[16px]">DTUBLIGRBL568</p>
+            <p class="text-[16px]">Solid Wood</p>
+            <p class="text-[16px]">L-shaped</p>
+            <p class="text-[16px]">Fabric + Cotton</p>
+            <p class="text-[16px]">Bright Grey & Lion</p>
+        </div>
+    </div>
+    <div class="Product-row flex w-full">
+        <div class="product space-y-2 w-[215px] px-4 border-r-1">    
+            <h5 class="text-[#000000] text-[28px] w-[143.83px]">Product</h5>
+            <p class="text-[16px]">Filling Material</p>
+            <p class="text-[16px]">Finish Type</p>
+            <p class="text-[16px]">Adjustable Headrest</p>
+            <p class="text-[16px]">Maximum Load Capacity</p>
+            <p class="text-[16px]">Origin of Manufacture</p>
+        </div>
+        <div class="second-col-product w-[450px] px-4 space-y-2 border-r-1">
+            <h5 class="text-[#000000] text-[28px] w-[143.83px] invisible">Product</h5>
+            <p class="text-[16px]">Foam</p>
+            <p class="text-[16px]">Bright Grey & Lion</p>
+            <p class="text-[16px]">No</p>
+            <p class="text-[16px]">280 KG</p>
+            <p class="text-[16px]">India</p>
+        </div>
+        <div class="third-col-product w-[450px] px-4 space-y-2">
+            <h5 class="text-[#000000] text-[28px] w-[143.83px] invisible">Product</h5>
+            <p class="text-[16px]">Matte</p>
+            <p class="text-[16px]">Bright Grey & Lion</p>
+            <p class="text-[16px]">Yes</p>
+            <p class="text-[16px]">300 KG</p>
+            <p class="text-[16px]">India</p>
+        </div>
     </div>
     
+    <div class="Dimension-row flex w-full">
+        <div class="dimensions space-y-2 w-[215px] px-4 border-r-1">
+            <h5 class="text-[#000000] text-[28px] w-[143.83px]">Dimensions</h5>
+            <p class="text-[16px]">Width</p>
+            <p class="text-[16px]">Height</p>
+            <p class="text-[16px]">Depth</p>
+            <p class="text-[16px]">Weight</p>
+            <p class="text-[16px]">Seat Height</p>
+            <p class="text-[16px]">Leg Height</p>
+        </div>
+        <div class="second-col-dimensions w-[450px] px-4 space-y-2 border-r-1">
+            <h5 class="text-[#000000] text-[28px] w-[143.83px] invisible">Dimensions</h5>
+            <p class="text-[16px]">265.32 cm</p>
+            <p class="text-[16px]">76 cm</p>
+            <p class="text-[16px]">167.76 cm</p>
+            <p class="text-[16px]">45 KG</p>
+            <p class="text-[16px]">41.52 cm</p>
+            <p class="text-[16px]">5.46 cm</p>
+        </div>
+        <div class="third-col-dimensions w-[450px] px-4 space-y-2">
+            <h5 class="text-[#000000] text-[28px] w-[143.83px] invisible">Dimensions</h5>
+            <p class="text-[16px]">265.32 cm</p>
+            <p class="text-[16px]">76 cm</p>
+            <p class="text-[16px]">167.76 cm</p>
+            <p class="text-[16px]">65 KG</p>
+            <p class="text-[16px]">41.52 cm</p>
+            <p class="text-[16px]">5.46 cm</p>
+        </div>   
+    </div>
+
+    <div class="warranty-row flex w-full">
+        <div class="first-col-warranty w-[215px] px-4 border-r-1">
+            <h5 class="text-[#000000] text-[28px] w-[143.83px]">Warranty</h5>
+            <p class="text-[16px]">Warranty Summary</p>
+            <p class="text-[16px]">Warranty Service Type</p>
+            <p class="text-[16px]">Covered in Warranty</p>
+            <p class="text-[16px]">Not Covered in Warranty</p>
+            <p class="text-[16px]">Domestic Warranty</p>
+        </div>    
+        <div class="second-col-warranty w-[450px] px-4 border-r-1">
+            <h5 class="text-[#000000] text-[28px] w-[143.83px] invisible">Warranty</h5>
+            <p class="text-[16px]">1 Year Manufacturing Warranty</p>
+            <p class="text-[16px]">For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com</p>
+            <p class="text-[16px] w-[232px]">Warranty Against Manufacturing Defect</p> 
+            <p class="text-[16px]">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</p>
+            <p class="text-[16px]">1 Year</p>
+            <a class="bg-[#B88E2F] text-[#FFFFFF] text-[20px] rounded-[3px] px-4 py-3 w-fit cursor-pointer">Add to Cart</a>
+        </div>    
+        <div class="third-col-warranty w-[450px] px-4">
+            <h5 class="text-[#000000] text-[28px] w-[143.83px] invisible">Warranty</h5>
+            <p class="text-[16px]">1.2 Year Manufacturing Warranty</p>
+            <p class="text-[16px]">For Warranty Claims or Any Product Related Issues Please Email at support@xyz.com</p>
+            <p class="text-[16px]">Warranty of the product is limited to manufacturing defects only.</p>
+            <p class="text-[16px]">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</p>
+            <p class="text-[16px]">3 Months</p>
+            <a class="bg-[#B88E2F] text-[#FFFFFF] text-[20px] rounded-[3px] px-4 py-3 w-fit cursor-pointer">Add to Cart</a>
+        </div>
+    </div>
 </div>
 
 <app-frame></app-frame>
