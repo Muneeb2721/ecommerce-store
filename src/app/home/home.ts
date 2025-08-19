@@ -26,16 +26,9 @@ export class Home {
 
   constructor(public route: Router) { }
 
-  showOverlay(idx: number, event: Event) {
-      event.stopPropagation(); // Prevent document click from firing
-      this.showOverlays = this.showOverlays.map((_, i) => i === idx);
-    }
-  
-    // Hideall overlays when clicking outside
-    @HostListener('document:click', ['$event'])
-    onDocumentClick(event: Event) {
-      this.showOverlays = this.showOverlays.map(() => false);
-    }
+  showOverlay(idx: number, isVisible: boolean) {
+  this.showOverlays = this.showOverlays.map((_, i) => i === idx ? isVisible : false);
+}
 
   show(){
     this.route.navigate(['cart-page'])
@@ -56,4 +49,45 @@ export class Home {
   redirectToShop(){
     this.route.navigate(['shop-page']);
   }
+
+  // Carousel Logic
+  activeSlide = 0; // index 0, 1, 2 for your 3 images
+
+slides = [
+  {
+    image: 'assets/imgHome/image20.png',
+    title: 'Inner Peace',
+    subtitle: '01 Bed Room',
+  },
+  {
+    image: 'assets/imgHome/image15.png',
+    title: 'Outer Peace',
+    subtitle: '02 Bed Room',
+  },
+  {
+    image: 'assets/imgHome/image11.png',
+    title: 'Mental Peace',
+    subtitle: '03 Lounge',
+  }
+];
+
+get currentSlide() {
+  return this.slides[this.activeSlide];
+}
+
+get nextSlide() {
+  return this.slides[(this.activeSlide + 1) % this.slides.length];
+}
+
+get prevSlide() {
+  return this.slides[(this.activeSlide + 2) % this.slides.length];
+}
+
+nextSlideFn() {
+  this.activeSlide = (this.activeSlide + 1) % this.slides.length;
+}
+
+goToSlide(index: number) {
+  this.activeSlide = index;
+}
 }

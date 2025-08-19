@@ -38,16 +38,9 @@ export class Shop {
   showOverlays: boolean[] = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
  
 
-  showOverlay(idx: number, event: Event) {
-    event.stopPropagation(); // Prevent document click from firing
-    this.showOverlays = this.showOverlays.map((_, i) => i === idx);
-  }
-
-  // Hide all overlays when clicking outside
-  @HostListener('document:click', ['$event'])
-  onDocumentClick(event: Event) {
-    this.showOverlays = this.showOverlays.map(() => false);
-  }
+   showOverlay(idx: number, isVisible: boolean) {
+  this.showOverlays = this.showOverlays.map((_, i) => i === idx ? isVisible : false);
+}
 
   show() {
     this.route.navigate(['cart-page']);

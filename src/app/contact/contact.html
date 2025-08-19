@@ -16,6 +16,7 @@
 <div class="font-poppins mb-12">
 
     <div class="w-[50%] mx-auto mb-20 text-center
+    xs1:w-[70%] xs1:space-y-4
     xs2:w-[70%] xs2:space-y-4
     sm1:w-[70%] sm1:space-y-4
     sm2:w-[60%] sm2:space-y-5
@@ -33,21 +34,24 @@
     </div>
 
     <div class="flex justify-center
+    xs1:flex-col xs1:items-center
     xs2:flex-col xs2:items-center
     sm1:flex-col sm1:items-center">
 
         <div class="address w-[30%]
-            xs2:w-[80%] xs2:space-y-5
+            xs1:w-[80%] xs1:space-y-5
             sm1:w-[75%] sm1:space-y-5
             sm2:w-[45%] sm2:space-y-5
             md1:w-[45%] md1:space-y-5
             md2:w-[45%] md2:space-y-5">
 
             <div class="flex gap-3 items-baseline
+                xs1:gap-3 xs1:justify-center    
                 xs2:gap-3 xs2:justify-center
                 sm1:gap-4 sm1:justify-center">
                 <fa-icon [icon]="faAddress" class="text-[28px]"></fa-icon>
                 <div class="w-[50%] space-y-3
+                xs1:w-[60%]
                 xs2:w-[60%]
                 sm1:w-[60%]">
                     <h5 class="text-[20px] font-bold">Address</h5>
@@ -56,10 +60,12 @@
             </div>
 
             <div class="flex gap-3 items-baseline
+                xs1:gap-3 xs1:justify-center    
                 xs2:gap-3 xs2:justify-center
                 sm1:gap-4 sm1:justify-center">
                 <fa-icon [icon]="faCall" class="text-[28px]"></fa-icon>
                 <div class=" space-y-3
+                xs1:w-[60%]
                 xs2:w-[60%]
                 sm1:w-[60%]">
                     <h5 class="text-[20px] font-bold">Phone</h5>
@@ -71,10 +77,12 @@
             </div>
 
             <div class="flex gap-3 items-baseline
+                xs1:gap-3 xs1:justify-center    
                 xs2:gap-3 xs2:justify-center
                 sm1:gap-4 sm1:justify-center">
                 <fa-icon [icon]="faTime" class="text-[28px]"></fa-icon>
                 <div class=" space-y-3
+                xs1:w-[60%]
                 xs2:w-[60%]
                 sm1:w-[60%]">
                     <h5 class="text-[20px] font-bold">Working Time</h5>
@@ -88,6 +96,7 @@
         </div>
 
         <div class="form w-[30%]
+        xs1:w-[60%] xs1:mt-8
         xs2:w-[60%] xs2:mt-8
         sm1:w-[50%] sm1:mt-8
         sm2:w-[40%]
