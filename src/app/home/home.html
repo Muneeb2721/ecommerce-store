@@ -112,7 +112,8 @@
         lg1:w-[23%]
         lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
-                style="background-image: url('assets/imgHome/image8.png')"  
+                
+                [style.background-image]="'url(' + productData1[0].image + ')'" 
                 (mouseenter)="showOverlay(0, true)" (mouseleave)="showOverlay(0, false)">
                 <div class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1
                 xs1:left-[80%]        
@@ -123,7 +124,7 @@
                         md2:left-[77%]
                         lg1:left-[76%]
                         lg2:left-[78%]">
-                    -30%
+                    {{productData1[0].discount}}
                 </div>
             </div>
 
@@ -138,19 +139,19 @@
                 <div class="xs1:px-2 product-name py-2">
                     <div class="flex justify-between items-baseline
                     xs2:flex-col">
-                        <h3 class="font-semibold text-[#3A3A3A] text-[24px]">Syltherine</h3>
+                        <h3 class="font-semibold text-[#3A3A3A] text-[24px]">{{productData1[0].pName}}</h3>
                         <a class="text-[#898989] text-[16px] cursor-pointer" (click)="productDetail()">
-                            View Details</a>
+                            {{productData1[0].viewDetail}}</a>
                     </div>
-                    <p class="text-[#898989] text-[16px]">Stylish cafe chair</p>
+                    <p class="text-[#898989] text-[16px]">{{productData1[0].subtitle}}</p>
                 </div>
 
                 <div class="xs1:px-2 product-price flex justify-between items-center py-4
                 xs2:flex-col xs2:items-start">
                     <h4 class="font-semibold text-[#3A3A3A] text-[20px] 
-                    xs2:text-[16px]">Rp 2,500.000</h4>
+                    xs2:text-[16px]">{{productData1[0].pPrice}}</h4>
                     <p class="text-[#898989] text-[16px] line-through
-                    xs2:text-[16px]">Rp 3,500.000</p>
+                    xs2:text-[16px]">{{productData1[0].pPriceDiscount}}</p>
                 </div>
 
             </div>
@@ -762,7 +763,7 @@ xs2:flex-col
             md2:gap-1">
 
             <div
-                [style.background-image]="'url(' + currentSlide.image + ')'" 
+                [style.background-image]="'url(' + currentSlide.image + ')'"  
                 class="carousel-card-1 h-[35rem] bg-cover flex items-end pl-8 pr-9 py-8
                 xs1:h-[35rem] xs1:mx-auto xs1:w-fit
                 xs2:h-[30rem] xs2:mx-auto xs2:w-fit
