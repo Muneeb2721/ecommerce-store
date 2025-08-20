@@ -4,19 +4,20 @@ import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faShare, faHeart, faCodeCompare, faArrowRight, faArrowLeft, faMinus, faCircle, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Observable } from 'rxjs';
+import { Cartservice, Product } from '../service/cartservice';
 
 @Component({
   selector: 'app-home',
   imports: [CommonModule, FontAwesomeModule],
   templateUrl: './home.html',
-  styleUrl: './home.css' 
+  styleUrl: './home.css'
 })
 export class Home implements OnInit {
   faShare = faShare;
   faCompare = faCodeCompare;
   faHeart = faHeart;
   faArrowRight = faArrowRight;
-  faArrowLeft  = faArrowLeft;
+  faArrowLeft = faArrowLeft;
   faLineChart = faMinus;
   faChevronLeft = faChevronLeft;
   faChevronRight = faChevronRight;
@@ -25,95 +26,155 @@ export class Home implements OnInit {
   // Array to track overlays for product cards 2-8 (index 0 = card 2, index 6 = card 8)
   showOverlays: boolean[] = [false, false, false, false, false, false, false, false, false];
 
-  // productAgent: Observable<string> = new Observable<string>();
+  products: Product[] = [
+    {
+      "imageUrl": "assets/imgHome/image8.png",
+      "detailUrl": "view details",
+      "discount": "-30%",
+      "title": "Syltherine",
+      "subtitle": "Stylish cafe chair",
+      "discountAmount": "Rp 2,500.000",
+      "actualAmount": "Rp 3,500.000"
+    }
+    ,
+    {
+      "imageUrl": "assets/imgHome/image22.png",
+      "detailUrl": "view details",
+      "discount": "-30%",
+      "title": "Leviosa",
+      "subtitle": "Stylish cafe chair",
+      "discountAmount": "Rp 2,500.000",
+      "actualAmount": "Rp 23,000.000"
+    }
+    ,
+    {
+      "imageUrl": "assets/imgHome/image13.png",
+      "detailUrl": "View details",
+      "discount": "-50%",
+      "title": "Lolito",
+      "subtitle": "Luxury big sofa",
+      "discountAmount": "Rp 7.000.000",
+      "actualAmount": "Rp 14.000.000"
+    },
+    {
+      "imageUrl": "assets/imgHome/image1.jpg",
+      "detailUrl": "View details",
+      "discount": "New",
+      "title": "Respira",
+      "subtitle": "Outdoor bar table and stool",
+      "discountAmount": "Rp 500.000",
+      "actualAmount": "Rp 23,000.000"
+    },
+    {
+      "imageUrl": "assets/imgHome/image4.png",
+      "detailUrl": "View details",
+      "discount": "-30%",
+      "title": "Grifo",
+      "subtitle": "Night lamp",
+      "discountAmount": "Rp 1.500.000",
+      "actualAmount": "Rp 23,000.000"
+    },
+    {
+      "imageUrl": "assets/imgHome/image8.png",
+      "detailUrl": "View details",
+      "discount": "New",
+      "title": "Muggo",
+      "subtitle": "Small mug",
+      "discountAmount": "Rp 150.000",
+      "actualAmount": "Rp 23,000.000"
+    },
+    {
+      "imageUrl": "assets/imgHome/image3.jpg",
+      "detailUrl": "View details",
+      "discount": "-50%",
+      "title": "Pingky",
+      "subtitle": "Cute bed set",
+      "discountAmount": "Rp 7.000.000",
+      "actualAmount": "Rp 14.000.000"
+    },
+    {
+      "imageUrl": "assets/imgHome/image9.jpg",
+      "detailUrl": "View details",
+      "discount": "New",
+      "title": "Potty",
+      "subtitle": "Minimalist flower pot",
+      "discountAmount": "Rp 500.000",
+      "actualAmount": "Rp 23,000.000"
+    }
+  ];
 
-  constructor(private route: Router) {}
+  constructor(private route: Router, private cartService: Cartservice) { }
 
-ngOnInit(): void{
-//   this.productAgent = new Observable(observer => {
-//     observer.next(this.productData1[0].image);
-//   });
-
-//   this.productAgent.subscribe(data => {
-//     console.log(data);
-//   })
-}
+  ngOnInit(): void {
+  }
 
   showOverlay(idx: number, isVisible: boolean) {
-  this.showOverlays = this.showOverlays.map((_, i) => i === idx ? isVisible : false);
-}
+    this.showOverlays = this.showOverlays.map((_, i) => i === idx ? isVisible : false);
+  }
 
-  show(){
+  show() {
     this.route.navigate(['cart-page'])
   }
 
-  redirectToCart(){
+  redirectToCart() {
     this.route.navigate(['cart-page']);
   }
 
-  redirectToComparison(){
+  redirectToComparison() {
     this.route.navigate(['product-comparison-page']);
   }
 
-  productDetail(){
+  productDetail() {
     this.route.navigate(['single-product-page']);
   }
 
-  redirectToShop(){
+  redirectToShop() {
     this.route.navigate(['shop-page']);
+  }
+
+  add(product: Product) {
+    this.cartService.addToCart(product);
+    this.route.navigate(['cart-page']);
   }
 
   // Carousel Logic
   activeSlide = 0; // index 0, 1, 2 for your 3 images
 
-slides = [
-  {
-    image: 'assets/imgHome/image20.png',
-    title: 'Inner Peace',
-    subtitle: '01 Bed Room',
-  },
-  {
-    image: 'assets/imgHome/image15.png',
-    title: 'Outer Peace',
-    subtitle: '02 Bed Room',
-  },
-  {
-    image: 'assets/imgHome/image11.png',
-    title: 'Mental Peace',
-    subtitle: '03 Lounge',
+  slides = [
+    {
+      image: 'assets/imgHome/image20.png',
+      title: 'Inner Peace',
+      subtitle: '01 Bed Room',
+    },
+    {
+      image: 'assets/imgHome/image15.png',
+      title: 'Outer Peace',
+      subtitle: '02 Bed Room',
+    },
+    {
+      image: 'assets/imgHome/image11.png',
+      title: 'Mental Peace',
+      subtitle: '03 Lounge',
+    }
+  ];
+
+  get currentSlide() {
+    return this.slides[this.activeSlide];
   }
-];
 
-get currentSlide() {
-  return this.slides[this.activeSlide];
-}
+  get nextSlide() {
+    return this.slides[(this.activeSlide + 1) % this.slides.length];
+  }
 
-get nextSlide() {
-  return this.slides[(this.activeSlide + 1) % this.slides.length];
-}
+  get prevSlide() {
+    return this.slides[(this.activeSlide + 2) % this.slides.length];
+  }
 
-get prevSlide() {
-  return this.slides[(this.activeSlide + 2) % this.slides.length];
-}
+  nextSlideFn() {
+    this.activeSlide = (this.activeSlide + 1) % this.slides.length;
+  }
 
-nextSlideFn() {
-  this.activeSlide = (this.activeSlide + 1) % this.slides.length;
-}
-
-goToSlide(index: number) {
-  this.activeSlide = index;
-}
-
-productData1 = [
-  {
-    image: 'assets/imgHome/image8.png',
-    discount: '-30%',
-    pName: 'Syltherine',
-    viewDetail: ' View Details',
-    subtitle: 'Stylish cafe chair',
-    pPrice: 'Rp 2,500.000',
-    pPriceDiscount: 'Rp 3,500.000'
-
-  },
-];
+  goToSlide(index: number) {
+    this.activeSlide = index;
+  }
 }

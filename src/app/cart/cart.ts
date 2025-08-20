@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHeadset, faShield, faTrash, faTrophy, faTruck } from '@fortawesome/free-solid-svg-icons';
 import { Frame } from '../frame/frame';
+import { Cartservice, Product } from '../service/cartservice';
 
 @Component({
   selector: 'app-cart',
@@ -13,7 +14,14 @@ import { Frame } from '../frame/frame';
 })
 export class Cart {
 
-  constructor(private route: Router){}
+  cartItems: Product[] = [];
+    
+  constructor(private route: Router,private cartService: Cartservice){
+    
+    this.cartService.cartItems$.subscribe(items => {
+      this.cartItems = items;
+    });
+  }
 
   faDelete = faTrash;
   faTrophy = faTrophy;

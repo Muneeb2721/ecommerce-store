@@ -66,6 +66,5 @@ export const routes: Routes = [
         path: 'footer-page',
         component: Footer
     }
-    
-    
+        
 ];

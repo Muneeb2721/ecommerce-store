@@ -50,7 +50,8 @@ lg1:px-2">
             lg1:right-3">Subtotal</p>
         </div>
 
-        <div class="items-name flex items-center gap-12 py-1.5
+        <div *ngFor="let product of cartItems" 
+        class="items-name flex items-center gap-12 py-1.5
         xs2:flex-wrap xs2:pl-1 xs2:gap-12
         sm1:flex-wrap sm1:pl-3 sm1:gap-12 sm1:w-fit
         sm2:flex-wrap sm2:pl-3 sm2:gap-14
@@ -60,7 +61,7 @@ lg1:px-2">
             <p class="img px-4 py-4 bg-[#F9F1E7] rounded-[8px] 
             xs2:absolute xs2:top-150
             sm1:absolute sm1:top-150">
-                <img src="assets/imgSingleProduct/asgaad-sofa.png" 
+                <img [src]="product.imageUrl" alt="Product Image" 
                 class="w-24 h-24">
             </p>
             <p class="text-[16px] text-[#9F9F9F] 
@@ -68,13 +69,13 @@ lg1:px-2">
             sm1:text-center
             sm2:text-center sm2:w-[10%]
             md1:text-center md1:w-[10%]
-            lg1:text-center ">Asgaard Sofa</p>
+            lg1:text-center ">{{product.title}}</p>
             <p class="text-[16px] text-[#9F9F9F] 
             xs2:w-[20%] xs2:text-center
             sm1:text-center
             sm2:text-center sm2:w-[10%]
             md1:text-center md1:w-[10%]
-            lg1:text-center">Rs. 250,000.00</p>
+            lg1:text-center">{{product.discountAmount}}</p>
             <p class="font-bold text-[16px] border-1 border-[#9F9F9F] rounded-[8px] px-4 py-2
             xs2:px-3 xs2:py-1
             sm1:px-3 sm1:py-1 sm1:relative sm1:left-5
@@ -86,7 +87,7 @@ lg1:px-2">
             sm2:text-center sm2:w-[10%] sm2:relative sm2:left-9
             md1:relative md1:left-13
             md2:relative md2:left-29
-            lg1:text-center">Rs. 250,000.00</p>
+            lg1:text-center">{{product.actualAmount}}</p>
             <fa-icon [icon]="faDelete" class="text-red-700 cursor-pointer 
             sm1:relative sm1:left-8
             sm2:relative sm2:left-8
