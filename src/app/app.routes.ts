@@ -11,7 +11,7 @@ import { Contact } from './contact/contact';
 import { Blog } from './blog/blog';
 import { Frame } from './frame/frame';
 import { CartSidebar } from './cart-sidebar/cart-sidebar';
-import { RxjsComponent } from './rxjs/rxjs';
+
 
 
 export const routes: Routes = [
@@ -66,10 +66,6 @@ export const routes: Routes = [
         path: 'footer-page',
         component: Footer
     }
-    ,
-    {
-        path: 'rxjs-page',
-        component: RxjsComponent
-    }
+    
     
 ];
