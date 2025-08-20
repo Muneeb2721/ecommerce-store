@@ -1,4 +1,8 @@
- {
+{
+  "builds": [
+    { "src": "angular.json", "use": "@vercel/angular" }
+  ],
+  "outputDirectory": "dist/ecommerce-store",
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]
