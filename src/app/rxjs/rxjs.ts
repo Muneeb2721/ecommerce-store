@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Observable, of, timeout } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-rxjs',
@@ -9,7 +9,7 @@ import { Observable, of, timeout } from 'rxjs';
   styleUrl: './rxjs.css'
 })
 
-export class Rxjs implements OnInit{
+export class RxjsComponent implements OnInit{
   agents: Observable<string> = new Observable<string>;
   agentName: string = '';
 
