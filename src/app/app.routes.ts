@@ -11,6 +11,8 @@ import { Contact } from './contact/contact';
 import { Blog } from './blog/blog';
 import { Frame } from './frame/frame';
 import { CartSidebar } from './cart-sidebar/cart-sidebar';
+import { About } from './about/about';
+import { LikedProducts } from './liked-products/liked-products';
 
 
 
@@ -60,6 +62,16 @@ export const routes: Routes = [
     {
         path: 'blog-page',
         component: Blog
+    }
+    ,
+    {
+        path: 'about-page',
+        component: About
+    }
+    ,
+    {
+        path: 'like-product-page',
+        component: LikedProducts
     }
     ,
     {
