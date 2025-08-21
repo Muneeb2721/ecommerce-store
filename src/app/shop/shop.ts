@@ -5,6 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faFilter, faGridHorizontal, faHeadset, faList, faShieldAlt, faTrophy, faTruck } from '@fortawesome/free-solid-svg-icons';
 import { faShare, faHeart, faCodeCompare, faArrowRight, faArrowLeft, faMinus, faCircle, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Frame } from '../frame/frame';
+import { Cartservice, Product } from '../service/cartservice';
 
 @Component({
   selector: 'app-shop',
@@ -31,16 +32,92 @@ export class Shop {
   faTruck = faTruck
   faHeadset = faHeadset;
 
-  constructor(private route: Router) {
+  constructor(private route: Router, private cartService: Cartservice) {
 
   }
   // Array to track overlays for product cards 2-8 (index 0 = card 2, index 6 = card 8)
   showOverlays: boolean[] = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
  
+  products: Product[] = [
+    {
+      "imageUrl": "assets/imgHome/image8.png",
+      "detailUrl": "view details",
+      "discount": "-30%", 
+      "title": "Syltherine",
+      "subtitle": "Stylish cafe chair",
+      "discountAmount": "Rp 2,500.000",
+      "actualAmount": "Rp 3,500.000"
+    }
+    ,
+    {
+      "imageUrl": "assets/imgHome/image22.png",
+      "detailUrl": "view details",
+      "discount": "-30%",
+      "title": "Leviosa",
+      "subtitle": "Stylish cafe chair",
+      "discountAmount": "Rp 2,500.000",
+      "actualAmount": "Rp 23,000.000"
+    }
+    ,
+    {
+      "imageUrl": "assets/imgHome/image13.png",
+      "detailUrl": "View details",
+      "discount": "-50%",
+      "title": "Lolito",
+      "subtitle": "Luxury big sofa",
+      "discountAmount": "Rp 7.000.000",
+      "actualAmount": "Rp 14.000.000"
+    },
+    {
+      "imageUrl": "assets/imgHome/image1.jpg",
+      "detailUrl": "View details",
+      "discount": "New",
+      "title": "Respira",
+      "subtitle": "Outdoor bar table and stool",
+      "discountAmount": "Rp 500.000",
+      "actualAmount": "Rp 23,000.000"
+    },
+    {
+      "imageUrl": "assets/imgHome/image4.png",
+      "detailUrl": "View details",
+      "discount": "-30%",
+      "title": "Grifo",
+      "subtitle": "Night lamp",
+      "discountAmount": "Rp 1.500.000",
+      "actualAmount": "Rp 23,000.000"
+    },
+    {
+      "imageUrl": "assets/imgHome/image8.png",
+      "detailUrl": "View details",
+      "discount": "New",
+      "title": "Muggo",
+      "subtitle": "Small mug",
+      "discountAmount": "Rp 150.000",
+      "actualAmount": "Rp 23,000.000"
+    },
+    {
+      "imageUrl": "assets/imgHome/image3.jpg",
+      "detailUrl": "View details",
+      "discount": "-50%",
+      "title": "Pingky",
+      "subtitle": "Cute bed set",
+      "discountAmount": "Rp 7.000.000",
+      "actualAmount": "Rp 14.000.000"
+    },
+    {
+      "imageUrl": "assets/imgHome/image9.jpg",
+      "detailUrl": "View details",
+      "discount": "New",
+      "title": "Potty",
+      "subtitle": "Minimalist flower pot",
+      "discountAmount": "Rp 500.000",
+      "actualAmount": "Rp 23,000.000"
+    }
+  ];
 
-   showOverlay(idx: number, isVisible: boolean) {
-  this.showOverlays = this.showOverlays.map((_, i) => i === idx ? isVisible : false);
-}
+  showOverlay(idx: number, isVisible: boolean) {
+    this.showOverlays = this.showOverlays.map((_, i) => i === idx ? isVisible : false);
+  }
 
   show() {
     this.route.navigate(['cart-page']);
@@ -60,5 +137,10 @@ export class Shop {
 
   redirectToShop() {
     this.route.navigate(['shop-page']);
+  }
+
+  add(product: Product) {
+    this.cartService.addToCart(product);
+    // this.route.navigate(['cart-page']);
   }
 }

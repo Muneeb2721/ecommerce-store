@@ -18,6 +18,10 @@ export class Footer {
     this.route.navigate(['shop-page']);
   }
 
+  redirectToAbout() {
+    this.route.navigate(['about-page']);
+  }
+
   redirectToContact() {
     this.route.navigate(['contact-page']);
   }

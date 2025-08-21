@@ -30,7 +30,7 @@ export class Home implements OnInit {
     {
       "imageUrl": "assets/imgHome/image8.png",
       "detailUrl": "view details",
-      "discount": "-30%",
+      "discount": "-30%", 
       "title": "Syltherine",
       "subtitle": "Stylish cafe chair",
       "discountAmount": "Rp 2,500.000",
@@ -116,9 +116,9 @@ export class Home implements OnInit {
     this.route.navigate(['cart-page'])
   }
 
-  redirectToCart() {
-    this.route.navigate(['cart-page']);
-  }
+  // redirectToCart() {
+  //   this.route.navigate(['cart-page']);
+  // }
 
   redirectToComparison() {
     this.route.navigate(['product-comparison-page']);
@@ -134,7 +134,7 @@ export class Home implements OnInit {
 
   add(product: Product) {
     this.cartService.addToCart(product);
-    this.route.navigate(['cart-page']);
+    // this.route.navigate(['cart-page']);
   }
 
   // Carousel Logic

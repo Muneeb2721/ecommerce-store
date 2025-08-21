@@ -21,12 +21,12 @@
       <div class="desktop-menu gap-25 items-center 
         lg2:flex lg1:flex md2:flex md1:hidden sm2:hidden sm1:hidden hidden">
         <div class="nav">
-          <ul class="flex font-poppins text-[16px] font-medium cursor-pointer gap-6
+          <ul class="flex font-poppins text-[16px] font-medium gap-6
              ">
-            <li class=""><a (click)="homePage()" class="">Home</a></li>
-            <li class=""><a (click)="shopPage()" class="">Shop</a></li>
-            <li class=""><a class="">About</a></li>
-            <li class=""><a (click)="contactPage()" class="">Contact</a></li>
+            <li><a (click)="homePage()" class="cursor-pointer">Home</a></li>
+            <li><a (click)="shopPage()" class="cursor-pointer">Shop</a></li>
+            <li><a (click)="aboutPage()" class="cursor-pointer"  >About</a></li>
+            <li><a (click)="contactPage()" class="cursor-pointer">Contact</a></li>
           </ul>
         </div>
 
@@ -35,7 +35,10 @@
           <fa-icon [icon]="faSearch" class=" cursor-pointer "></fa-icon>
           <fa-icon [icon]="faHeart" class=" cursor-pointer "></fa-icon>
           <fa-icon [icon]="faShoppingCart" class=" cursor-pointer " (click)="redirectToCartSideBar()"></fa-icon>
-          <p id="sidebar" class="hidden cart-sidebar absolute z-50 right-0 top-0"><app-cart-sidebar></app-cart-sidebar></p>
+          <span class="cart-items-no absolute top-[5px] right-[102px] bg-red-600 text-white py-1 px-3 text-[15px] font-bold rounded-[11px]">
+            {{ cartCount$ | async }}
+          </span>
+          <p id="sidebar" *ngIf="openSidebar" class="cart-sidebar absolute z-50 right-0 top-0"><app-cart-sidebar (closeSidebar)="closeSidebar()"></app-cart-sidebar></p>
         </div>
       </div>
 
@@ -59,7 +62,7 @@
           <ul class="font-poppins text-[16px] font-medium space-y-10">
             <li class=""><a (click)="homePage()" class="cursor-pointer">Home</a></li>
             <li class=""><a (click)="shopPage()" class="cursor-pointer">Shop</a></li>
-            <li class=""><a class="cursor-pointer">About</a></li>
+            <li class=""><a (click)="aboutPage()" class="cursor-pointer">About</a></li>
             <li class=""><a (click)="contactPage()" class="cursor-pointer">Contact</a></li>
           </ul>
         </div>
@@ -69,6 +72,9 @@
           <fa-icon [icon]="faSearch" class="cursor-pointer"></fa-icon>
           <fa-icon [icon]="faHeart" class="cursor-pointer"></fa-icon>
           <fa-icon [icon]="faShoppingCart" class="cursor-pointer" (click)="redirectToCartSideBar()"></fa-icon>
+          <span class="cart-items-no absolute top-[5px] right-[102px] bg-red-600 text-white py-1 px-3 text-[15px] font-bold rounded-[11px]">
+            {{ cartCount$ | async }}
+          </span>
         </div>
     </div>
 

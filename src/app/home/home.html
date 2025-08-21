@@ -1,7 +1,6 @@
 <div class="banner h-[40rem] w-full relative top-0 bg-cover bg-center mb-12"
-    [style.background-image]="'url(' + products[1].imageUrl + ')'">
-
-    <div class="arrival bg-[#FFF3E3] font-poppins h-[423px] rounded-[10px] relative t{{products[4].subtitle}}0
+    style="background-image: url('assets/imgHome/scandivle.jpg')">
+    <div class="arrival bg-[#FFF3E3] font-poppins h-[423px] rounded-[10px] relative top-30
         lg2:w-[47%] lg2:left-[51%]
         lg1:w-[47%] lg1:left-[51%]
         md2:left-[38%] md2:w-[60%]
@@ -349,7 +348,8 @@ xs1:w-[40%]
         lg1:w-[23%]
         lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
-                [style.background-image]="'url(' + products[3].imageUrl + ')'">
+                [style.background-image]="'url(' + products[3].imageUrl + ')'"
+                (mouseenter)="showOverlay(3, true)" (mouseleave)="showOverlay(3, false)">
                 <div class="saleOffer relative left-50 top-2 bg-[#2EC1AC] text-white text-center font-poppins rounded-full w-fit py-3 px-2
                 xs1:left-[80%]    
                 xs2:left-[75%]
@@ -424,7 +424,8 @@ xs1:w-[40%]
         lg1:w-[23%]
         lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
-                [style.background-image]="'url(' + products[4].imageUrl + ')'" >
+                [style.background-image]="'url(' + products[4].imageUrl + ')'" 
+                (mouseenter)="showOverlay(4, true)" (mouseleave)="showOverlay(4, false)">
                 <div class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1
                 xs1:left-[80%]    
                 xs2:left-[75%]
@@ -498,7 +499,8 @@ xs1:w-[40%]
         lg1:w-[23%]
         lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
-                [style.background-image]="'url(' + products[5].imageUrl + ')'">
+                [style.background-image]="'url(' + products[5].imageUrl + ')'"
+                (mouseenter)="showOverlay(5, true)" (mouseleave)="showOverlay(5, false)">
                 <div class="saleOffer relative left-50 top-2 bg-[#2EC1AC] text-white text-center font-poppins rounded-full w-fit py-3 px-2
                 xs1:left-[80%]    
                 xs2:left-[75%]
@@ -573,7 +575,8 @@ xs1:w-[40%]
         lg1:w-[23%]
         lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
-                [style.background-image]="'url(' + products[6].imageUrl + ')'">        
+                [style.background-image]="'url(' + products[6].imageUrl + ')'"
+                (mouseenter)="showOverlay(6, true)" (mouseleave)="showOverlay(6, false)">
 
                 <div class="saleOffer relative left-50 top-2 bg-[#E97171] text-white text-center font-poppins rounded-full w-fit py-3 px-1
                 xs1:left-[80%]    
@@ -649,7 +652,8 @@ xs1:w-[40%]
         lg1:w-[23%]
         lg2:w-[21%]">
             <div class="product-card-image h-[20rem] bg-cover bg-center cursor-pointer"
-                [style.background-image]="'url(' + products[7].imageUrl + ')'" >
+                [style.background-image]="'url(' + products[7].imageUrl + ')'" 
+                (mouseenter)="showOverlay(7, true)" (mouseleave)="showOverlay(7, false)">
                 <div class="saleOffer relative left-45 top-2 bg-[#2EC1AC] text-white text-center font-poppins rounded-full w-fit py-3 px-2
                 xs1:left-[80%]    
                 xs2:left-[75%]
@@ -772,7 +776,7 @@ xs2:flex-col
                 xs1:h-[35rem] xs1:mx-auto xs1:w-fit
                 xs2:h-[30rem] xs2:mx-auto xs2:w-fit
                 sm1:mx-auto">
-                [style.background-image]="'url(' + products[1].imageUrl + ')'" 
+                
                 
                 <div class="description bg-white px-4 py-8 space-y-1 opacity-[0.86]">
                     <p class="text-[#616161] text-[18px] font-bold w-fit">
@@ -787,9 +791,9 @@ xs2:flex-col
             
             </div>
 
-
+            <!-- [style.background-image]="'url(' + nextSlide.image + ')'"  -->
             <div
-                [style.background-image]="'url(' + nextSlide.image + ')'" 
+                [style.background-image]="'url(' + nextSlide.image + ')'"  
                 class="carousel-card-2 h-[28rem] bg-cover flex items-end pl-6 pr-7 py-8
                 xs1:h-[35rem] xs1:mx-auto xs1:w-fit xs1:hidden
                 xs2:h-[30rem] xs2:mx-auto xs2:w-fit xs2:hidden
@@ -818,12 +822,14 @@ xs2:flex-col
                 </div>
             </div>
 
-            <div class="carousel-card-3 h-[28rem] w-9 bg-cover flex items-end pl-6 pr-7 py-8
+            <div [style.background-image]="'url(' + prevSlide.image + ')'"  
+            class="carousel-card-3 h-[28rem] w-9 bg-cover flex items-end pl-6 pr-7 py-8
             xs1:h-[30rem] xs1:mx-auto xs1:w-fit xs1:hidden    
             xs2:h-[30rem] xs2:mx-auto xs2:w-fit xs2:hidden
                 sm1:mx-auto sm1:w-fit sm1:hidden
                 md1:w-35"
-                [style.background-image]="'url(' + prevSlide.image + ')'">
+                >
+                <!-- [style.background-image]="'url(' + prevSlide.image + ')'" -->
                 <div class="description bg-white px-4 py-8 space-y-1 opacity-[0.86]
                     md1:invisible
                     lg1:invisible
