@@ -36,4 +36,9 @@ export class Cart {
   redirectToHome(){
     this.route.navigate(['home-page']);
   }
+
+  remove(productTitle: string) {
+    this.cartService.removeFromCart(productTitle);
+    console.log("Remove Item")
+  }
 }

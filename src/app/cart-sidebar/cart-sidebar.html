@@ -1,39 +1,26 @@
-<div id="cart-sidebar" class="cart-sidebar bg-white font-poppins w-fit flex flex-col gap-5">
+<div id="cartssidebar" class="cartsidebar bg-white font-poppins w-fit flex flex-col gap-5">
     
     <div class="head flex items-center justify-between gap-25 mx-8 mt-6">
         <h1 class="text-[24px] font-semibold">Shopping Cart</h1>
         <fa-icon [icon]="faCross" class=" cursor-pointer " id="cross" (click)="removeCartSidebar()"></fa-icon>
-    </div>
+    </div> 
 
     <div class="hr bg-[#D9D9D9] border-t-2 border-t-[#9F9F9F] mt-4 mx-8 opacity-[0.3]"></div>
     
-    <div class="items flex flex-col gap-3 mt-4">
+    <div  *ngFor="let product of cartItems"
+        class="items flex flex-col gap-3 mt-4">
         <div class="item1 flex justify-around items-center">
             <div class="image bg-[#D9D9D9] rounded-[8px]">
-                <img src="assets\imgSingleProduct\asgaad-sofa.png" class="w-24 h-24 rounded-[8px]">
+                <img [src]="product.imageUrl" class="w-24 h-24 rounded-[8px]">
             </div>
             <div class="product-description flex gap-8 items-center">
                 <div class="product-name flex flex-col gap-3.5">
-                    <h3 class="">Asgaard Sofa</h3>
-                    <p class="">1 x <span class="text-[#B88E2F]">Rs. 250,000.00</span> </p>
+                    <h3 class="">{{product.title}}</h3>
+                    <p class="">1 x <span class="text-[#B88E2F]">{{product.discountAmount}}</span></p>
                 </div>
-                <fa-icon [icon]="faCircleXmark" class=" cursor-pointer "></fa-icon>
+                <fa-icon [icon]="faCircleXmark" class="cursor-pointer" (click)="remove(product.title)"></fa-icon>
             </div>
         </div>
-        <div class="item2 flex justify-around items-center">
-            <div class="image">
-                <img src="assets\imgSingleProduct\image3.jpg" class="w-24 h-24 rounded-[8px]">
-            </div>
-            <div class="product-description flex gap-8 items-center">
-                <div class="product-name flex flex-col gap-3.5">
-                    <h3 class="">Casaliving Wood</h3>
-                    <p class="">1 x <span class="text-[#B88E2F]">Rs. 270,000.00</span> </p>
-                </div>
-                <fa-icon [icon]="faCircleXmark" class=" cursor-pointer "></fa-icon>
-            </div>
-        </div>
-        
-        
     </div>
 
     <div class="amount flex justify-around items-center mt-4">

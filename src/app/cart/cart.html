@@ -30,7 +30,7 @@ lg1:px-2">
     md1:mb-12
     md2:mb-10">
         
-        <div class="items-head bg-[#F9F1E7] flex items-center gap-24 py-1.5 relative pl-45
+        <div class="items-head bg-[#F9F1E7] flex items-center gap-24 py-1.5 relative pl-10 pr-10
         xs1:pl-1: xs1:gap-[12%]
         xs2:pl-1 xs2:gap-[12%]
         sm1:pl-6 sm1:gap-[16%]
@@ -38,6 +38,7 @@ lg1:px-2">
         md1:pl-52 md1:gap-[12%]
         md2:pl-52 md2:gap-[16%]
         lg1:pl-52 lg1:gap-[12%]">
+            <p class="img px-4 py-4 invisible"></p>
             <p class="font-bold text-[16px]">Product</p>
             <p class="font-bold text-[16px]">Price</p>
             <p class="font-bold text-[16px]">Quantity</p>
@@ -50,8 +51,8 @@ lg1:px-2">
             lg1:right-3">Subtotal</p>
         </div>
 
-        <div *ngFor="let product of cartItems" 
-        class="items-name flex items-center gap-12 py-1.5
+        <div *ngFor="let product of cartItems"
+        class="items-name flex items-center gap-12 py-1.5 
         xs2:flex-wrap xs2:pl-1 xs2:gap-12
         sm1:flex-wrap sm1:pl-3 sm1:gap-12 sm1:w-fit
         sm2:flex-wrap sm2:pl-3 sm2:gap-14
@@ -69,13 +70,15 @@ lg1:px-2">
             sm1:text-center
             sm2:text-center sm2:w-[10%]
             md1:text-center md1:w-[10%]
-            lg1:text-center ">{{product.title}}</p>
+            lg1:text-center 
+            lg2:pr-2">{{product.title}}</p>
             <p class="text-[16px] text-[#9F9F9F] 
             xs2:w-[20%] xs2:text-center
             sm1:text-center
             sm2:text-center sm2:w-[10%]
             md1:text-center md1:w-[10%]
-            lg1:text-center">{{product.discountAmount}}</p>
+            lg1:text-center
+            lg2:pr-8">{{product.discountAmount}}</p>
             <p class="font-bold text-[16px] border-1 border-[#9F9F9F] rounded-[8px] px-4 py-2
             xs2:px-3 xs2:py-1
             sm1:px-3 sm1:py-1 sm1:relative sm1:left-5
@@ -88,7 +91,7 @@ lg1:px-2">
             md1:relative md1:left-13
             md2:relative md2:left-29
             lg1:text-center">{{product.actualAmount}}</p>
-            <fa-icon [icon]="faDelete" class="text-red-700 cursor-pointer 
+            <fa-icon [icon]="faDelete" (click)="remove(product.title)" class="text-red-700 cursor-pointer 
             sm1:relative sm1:left-8
             sm2:relative sm2:left-8
             md1:relative md1:left-14
